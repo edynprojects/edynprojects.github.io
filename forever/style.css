@@ -42,6 +42,9 @@ section {
     /* display: none; */
     
    }
+   .none {
+    display: none;
+   }
    .slideleft {
     animation: slideleft 1s linear forwards;
 }
@@ -618,7 +621,8 @@ nav ul li:hover::after {
     padding-bottom: 6px;
 }
 #testimonials img {
-    width: 20%;
+    width: 70px;
+    height: 50px;
     border-radius: 10px;
     padding-right: 3px;
 }
@@ -1014,7 +1018,22 @@ textarea {
         width: 100%;
       }
       nav {
-        display: none;
+     width: 250px;
+    height: 100vh;
+    color:#fff;
+    top: 0;
+    right: -100%;
+    background: #0f1212;
+    z-index: 200;
+    transition: 1s;
+    position: fixed;
+      }
+      nav ul {
+        display: block;
+         margin: 50px 20px;
+      }
+      nav ul li {
+        padding-top: 80px;
       }
       .phase2 {
         color: #f8f6f6;
@@ -1307,8 +1326,7 @@ textarea {
 }
 .ts .box {
     width:350px;
-    height:620px;   
-    /* margin-left: -30px; */
+    height:620px;       
  }
  .ts .box::before {
     content: ' ';
