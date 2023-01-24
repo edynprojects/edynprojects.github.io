@@ -15,18 +15,21 @@
             <div id="fs">
                 <div class="otherlinks">
                     <a href="#signup">Sign Up &#8594</a>
-                    <a href="#">Login In &#8594</a>
+                    <a href="#login">Login In &#8594</a>
                 </div>
                 <header>
                     <div class="logo padd-15 slideleft">
                         <a href="#">FOREVER</a>
                     </div>
-                    <nav>
+                    <div id="menuBtn">
+                        <img src="./img/icons8-menu-30.png" alt="menu" id="menu">
+                    </div>
+                    <nav id="sideNav">
                         <ul class="padd-15">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">About</a></li>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#ss">Services</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="#about">About</a></li>
                         </ul>
                     </nav>
 
@@ -213,9 +216,12 @@
                         </div>
                     <div class="row">                        
                     <div class="group">
-                        <div class="title">
+                        <div class="title">                            
                             <h3>nelson mandela</h3>
-                            <h4>@nelsonmandela<ion-icon name="logo-twitter"></ion-icon></h4>
+                            <div class="testimonialsh4img">
+                                <img src="./img/personface2.jpg" alt="">
+                                <h4>@nelsonmandela<ion-icon name="logo-twitter"></ion-icon></h4>
+                            </div>                           
                         </div>
                         <div class="testimonial">
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto quae ea labore vero voluptate enim.</p>
@@ -223,17 +229,24 @@
                     </div>
                     <div class="group">
                         <div class="title">
+                            
                             <h3>daniel philps</h3>
+                          <div class="testimonialsh4img">
+                            <img src="./img/personface3.jpg" alt="">
                             <h4>@dannyp<ion-icon name="logo-twitter"></ion-icon></h4>
+                          </div>  
                         </div>
                         <div class="testimonial">
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto quae ea labore vero voluptate enim.</p>
                         </div>
                     </div>
                     <div class="group">
-                        <div class="title">
+                        <div class="title">                            
                             <h3>chad pascal</h3>
-                            <h4>@chadpascaler<ion-icon name="logo-twitter"></ion-icon></h4>
+                            <div class="testimonialsh4img">
+                                <img src="./img/personface1.jpg" alt="">
+                                <h4>@chadpascaler<ion-icon name="logo-twitter"></ion-icon></h4>
+                            </div>
                         </div>
                         <div class="testimonial">
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto quae ea labore vero voluptate enim.</p>
@@ -309,7 +322,9 @@
                         <h3>newsletter</h3>
                     </div>
                     <div class="content">
+                        <textarea name="message" id=""  placeholder="write your message.."></textarea>
                         <div class="footeremail"><input type="email" name="email" id="" placeholder="enter your email address"> <button type="submit">  sign up</button></div>
+                    
                      <div class="inputcheckbox">   <input type="checkbox" name="ageement" id="" > <h3>i agree to edyn projects privacy policy</h3></div>
                         <div class="socialicons">
                             <ion-icon name="logo-whatsapp"></ion-icon>
