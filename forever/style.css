@@ -13,10 +13,13 @@
     --text-black-700: #504e70;
   --bg-lineargradient-900:  linear-gradient(45deg red,blue);
 }
+html {
+    scroll-behavior: smooth;
+}
 body {
     background: #23242a;
     text-transform: capitalize;
-    scroll-behavior: smooth;
+    
     /* overflow-x: hidden; */
     width: 100%;
 }
@@ -1313,7 +1316,8 @@ textarea {
         padding: 30px 10px 10px 10px;
      } 
 #footer {
-    padding-bottom: 10px;
+    padding-bottom: 100px;
+    
 }
 #footer  .row {
    padding-left: 7px;
@@ -1387,7 +1391,8 @@ textarea {
 .ts {
     width:350px;
     height:620px;   
-  
+    margin: auto;
+    width: 100%;
 }
 .ts .box {
     width:350px;
@@ -1418,7 +1423,7 @@ textarea {
 }
 .inputbox input:valid ~ i, 
 .inputbox input:focus ~ i {
-    height: 35px;
+    height: 45px;
 }
 .inputselectbox span {
     font-size: 0.9em;
@@ -1453,7 +1458,7 @@ textarea {
     width: 100px;
     font-size: 17px;
     font-weight: 500;
-    margin-top: 5px;
+    margin-top: 15px;
     padding: 7px 15px;
     transition: 0.5s;
     color: #242222;
