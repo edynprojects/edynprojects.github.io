@@ -358,6 +358,7 @@ nav ul li:hover::after {
  .ssconbox .conbox h4 {
     font-size: 15px;
     font-weight: 400;    
+    padding: 0 20px;
     color: #828e87;
  }
  .ssconbox .conbox img {
