@@ -1,0 +1,279 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: poppins;
+    list-style: none;
+    color: #fff;
+    background: #23242a;
+}
+header {
+    padding: 20px 30px;
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background:  rgb(55, 59, 143); 
+    /* background: rgba(29, 29, 29, 0.); */
+}
+nav {
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    align-items: center;   
+    
+}
+.nav-links {
+    display: flex;   
+}
+.nav-links li a{
+    padding: 0 20px;
+    color: black;
+}
+.logo img {
+    width: 60px;
+}
+.fs {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.1), rgba(2, 38, 95, 0.812)),url(./img/hannah-busing-gktFjKSWAmA-unsplash.jpg);
+    background-size: cover;
+    background-position-y: bottom;
+    text-align: center;
+    padding: 0px 30px;
+}
+.fsani {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cta-con {
+    position: relative;
+}
+.cta-con img {
+    width: 100%;
+    position: absolute;
+    top: -100px;
+    left: 0;
+    background-size: cover;
+    
+}
+.cta {
+    text-transform: capitalize;
+}
+.cta h1 {
+    font-size: 40px;
+    font-weight: 500;
+    text-shadow: 3px 2px rgb(61, 97, 227);
+    text-align: left;
+    color: white;
+}
+.after::after {
+    position: absolute;
+    height: 5px;
+    width: 50px;
+    background: #fff;
+    content: ' ';
+    display: block;
+    bottom: -10px;
+}
+.cta h2 {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    font-size:20px;
+    font-weight: 400;
+    color: rgb(210, 207, 207);
+    position: relative;
+}
+iframe {
+    margin-bottom: 30px;
+}
+button {
+    padding: 10px 20px;    
+    outline: 0;
+    border: 2px solid rgb(199,197,197);
+    background-color: transparent;
+    color: white;
+    font-size: 15px;
+    font-family: poppins;
+    text-transform: capitalize;
+}
+.navmenu {    
+    padding: 3px;
+    width: 45px;
+    height: 45px;
+    background: rgb(187, 188, 189);
+    text-align: center;
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    cursor: pointer;
+    z-index: 3;
+    margin-right: 10px;
+}
+.navmenu i {
+    color: green;
+    font-size: 30px;
+    font-weight: 700;
+}
+ .container {
+    color: black;
+    display: flex;
+    justify-content: center;
+    background: #23242a;
+    height: auto;
+    width: 100%;
+}
+.row {
+    display: block;
+    padding: 5px 10px;
+}
+.col {
+    padding: 10px;
+    height: 250px;    
+    margin: 30px 10px;
+    border-radius: 20px;
+    border: 0;    
+    background: #28292d;
+    transition: 0.8s;
+}
+.col-2 {
+    padding: 10px;
+    height: 400px;    
+    margin: 30px 10px;
+    border-radius: 20px;
+    border: 0;    
+    background: #28292d;
+    transition: 0.8s;
+}
+.col:hover, .col-2:hover{
+    box-shadow: 0px 0px 20px rgb(26, 24, 24);
+}
+.col h2{
+    text-align: center;
+    color: #fff;
+    font-weight: 400;
+}
+.col a {
+    color: green;    
+}
+.center {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.circle {
+    text-align: center;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #3c3d3e;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+ion-icon {
+    font-size: 50px;
+    color: green;
+}
+.written-location ion-icon {
+    font-size: 40px;
+}
+.title {
+    text-transform: capitalize;
+    width: 100%;
+}
+.title h1 {
+    color: green;
+    font-weight: 600;
+    font-family: gabriela;
+    text-align: left;
+    font-size: 27px;
+    position: relative;
+}
+.title h2 {
+    margin-top: 20px;
+    text-align: left;
+    font-weight: 400;
+    font-size: 20px;
+    color: #fff;
+}
+.address {    
+    text-transform: capitalize;
+}
+.address h2 {
+    margin-top: 20px;
+}
+.address h3 {
+    color: rgb(138, 142, 138);
+    font-weight: 400;    
+}
+.fos {
+    margin-top: 100px;
+    height: auto;
+    width: 100%;    
+    display: block;
+}
+.col-3 {
+    padding: 10px;
+    height: 100px;    
+    border: 0;    
+    margin-top: 20px;
+    background: #23242a;
+    transition: 0.8s;
+    color: white;
+}
+li {
+    list-style: none;
+}
+.fos h1 {
+    color: white;
+    font-weight: 500;
+}
+.fos ul {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    align-items: center;
+    
+}
+.fos li {
+    padding: 10px;
+}
+.fos ion-icon {
+    font-size: 30px;
+    background: #3c3d3e;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.fos ul li ion-icon:hover{
+    transform: translateY(-6px);
+    color: green;
+}
+
+
+
+
+
+
+
+
+
+
+
+
