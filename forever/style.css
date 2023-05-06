@@ -529,8 +529,7 @@ nav ul li:hover::after {
     color: #242222;
 }
 .submit:hover {
-    transform: translateY(-2px);
-    
+    transform: translateY(-2px);    
 }
 
 #contact {
@@ -692,8 +691,7 @@ nav ul li:hover::after {
     height: 100vh;
     width: 100%;
     background: #0e0e0e;
-    position: relative;
-    
+    position: relative;    
  }
  #footer  .row {
     display: flex;    
