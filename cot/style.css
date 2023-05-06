@@ -8,7 +8,7 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     list-style: none;
     color: #fff;
     background: #23242a;
@@ -105,7 +105,7 @@ button {
     background-color: transparent;
     color: white;
     font-size: 15px;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     text-transform: capitalize;
 }
 .navmenu {    
@@ -189,7 +189,8 @@ ion-icon {
     color: green;
 }
 .written-location ion-icon {
-    font-size: 40px;
+    font-size: 30px;
+    margin-right: 10px;
 }
 .title {
     text-transform: capitalize;
@@ -198,7 +199,7 @@ ion-icon {
 .title h1 {
     color: green;
     font-weight: 600;
-    font-family: gabriela;
+    font-family: 'Gabriela', serif;
     text-align: left;
     font-size: 27px;
     position: relative;
@@ -219,12 +220,26 @@ ion-icon {
 .address h3 {
     color: rgb(138, 142, 138);
     font-weight: 400;    
+    font-size: 20px;
 }
-.fos {
-    margin-top: 100px;
-    height: auto;
-    width: 100%;    
-    display: block;
+.socialicons {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    background-color: #23242a;
+    padding: 20px;
+}
+.socialicons ion-icon {
+    color: #45ff70;
+    font-size: 25px;
+    background: #3c3d3e;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+    margin: 5px 10px;
+}
+.socialicons ion-icon:hover {
+    transform: translateY(-3px);
 }
 .col-3 {
     padding: 10px;
@@ -235,43 +250,165 @@ ion-icon {
     transition: 0.8s;
     color: white;
 }
+.row-2 {
+    display: flex;
+    justify-content: center;
+}
+.col-4 {
+    max-width: 45%;    
+    margin: 15px 15px 30px 15px;
+    flex: 0 0 45%;
+    padding: 0 15px;    
+}
+.col-4 h3 {
+    color: #3c3f3d;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 19px;
+    position: relative;
+}
+.col-4 h3::after {
+content: ' ';
+width: 11%;
+position: absolute;
+bottom: -5px;
+left: 0;
+background: blue;
+height: 4px;
+}
 li {
     list-style: none;
 }
-.fos h1 {
-    color: white;
-    font-weight: 500;
-}
-.fos ul {
+.di-flex {
     display: flex;
-    padding: 10px;
-    justify-content: center;
+}
+.footer img {
+    width: 100px;
+    padding-right: 10px;
+}
+.footer {
     height: auto;
-    width: 100%;
+    margin-top: 200px;
+    background-color: white;
+    color: #23242a;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    
-}
-.fos li {
     padding: 10px;
+    text-transform: capitalize;
 }
-.fos ion-icon {
-    font-size: 30px;
-    background: #3c3d3e;
-    padding: 10px;
-    border-radius: 10px;
+.inputcheckbox {
+    width: 100%;
+    display: flex;
+    padding: 5px ;
+}
+.inputcheckbox h3 {
+    margin: 0 5px;
+    color: rgba(255, 255, 255, 0.846);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.newsletter {
+    margin: 25px 0;
+}
+.newsletter .title h3 {
+    font-size: 23px;
+}
+.newsletter .row-3  {
+    position: relative;
+    padding: 40px;
+    background-color: rgb(51, 85, 255);
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 5px 15px 35px rgba(0,0,0,0.25);
+}
+.inputbox {
+    position: relative;
+    margin: 40px 0;
+}
+.inputbox input {
+    position: relative;
+    padding: 8px 13px;
+    border: 0;
+    outline: 0;
+    font-size: 20px;
+    margin-bottom: 10px;
+    background-color: transparent;
+    color: rgb(4, 4, 4);
+    letter-spacing: 0.05em;
+    z-index: 2;
+    text-transform: capitalize;
+    font-family: 'Poppins', sans-serif;
+}
+.inputbox span {
+    position: absolute;
+    left: 0;
+    pointer-events: none;
+    font-size: 18px;
     transition: 0.5s;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.05em;
 }
-.fos ul li ion-icon:hover{
-    transform: translateY(-6px);
-    color: green;
+.inputbox input:valid ~ span,
+.inputbox input:focus ~ span
+{
+    font-size: 16px;
+    transform: translateY(-32px);
+}
+.inputbox i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1;
+    height: 3px;
+    border-radius: 4px;
+    pointer-events: none;
 }
 
+.inputbox input:valid ~ i,
+.inputbox input:focus ~ i {
+    height: 100%;
+    box-shadow: inset 0 0 10px green;
+}
+.submit{
+    border: 0;
+    outline: 0;
+    background: #fff;    
+    border-radius: 5px;
+    width: 100px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 5px;
+    padding: 7px 15px;
+    transition: 0.5s;
+    color: #242222;
+    letter-spacing: 1px;
+    box-shadow: inset 0px 0px 2px green;
+}
 
+.submit:hover {
+    transform: translateY(-2px);    
+}
 
-
-
-
-
+.conclusion {    
+    margin-bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.conclusion h4 {
+    color: #6c6e76;
+    font-weight: 400;
+    font-size: 13px;
+    text-align: center;
+}
 
 
 
