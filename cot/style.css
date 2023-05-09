@@ -135,6 +135,12 @@ button {
     height: auto;
     width: 100%;
 }
+.container-2 {
+    color: black;
+    background: #23242a;
+    height: auto;
+    width: 100%;
+}
 .row {
     display: block;
     padding: 5px 10px;
@@ -142,16 +148,18 @@ button {
 .col {
     padding: 10px;
     height: 250px;    
-    margin: 30px 10px;
+    margin: 30px 0px;
     border-radius: 20px;
     border: 0;    
     background: #28292d;
     transition: 0.8s;
+    width: 90%;
 }
 .col-2 {
     padding: 10px;
     height: 400px;    
-    margin: 30px 10px;
+    margin: 30px 0px;
+    width: 90%;
     border-radius: 20px;
     border: 0;    
     background: #28292d;
@@ -250,18 +258,25 @@ ion-icon {
     transition: 0.8s;
     color: white;
 }
+h5 {
+    color: #fff;
+}
 .row-2 {
     display: flex;
     justify-content: center;
+    color: #fff;
+}
+.col-5 {
+    color: #fff;
 }
 .col-4 {
     max-width: 45%;    
-    margin: 15px 15px 30px 15px;
+    
     flex: 0 0 45%;
     padding: 0 15px;    
 }
 .col-4 h3 {
-    color: #3c3f3d;
+    color: #dcdddd;
     font-weight: 700;
     margin-bottom: 15px;
     font-size: 19px;
@@ -276,6 +291,12 @@ left: 0;
 background: blue;
 height: 4px;
 }
+.ts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
 li {
     list-style: none;
 }
@@ -289,8 +310,8 @@ li {
 .footer {
     height: auto;
     margin-top: 200px;
-    background-color: white;
-    color: #23242a;
+    background-color: #23242a;
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -304,27 +325,30 @@ li {
 }
 .inputcheckbox h3 {
     margin: 0 5px;
-    color: rgba(255, 255, 255, 0.846);
+    color: #fff;
     font-size: 16px;
     font-weight: 400;
 }
 
 .newsletter {
     margin: 25px 0;
+    color: #fff;
 }
 .newsletter .title h3 {
     font-size: 23px;
+    padding: 10px 15px;
 }
 .newsletter .row-3  {
     position: relative;
     padding: 40px;
-    background-color: rgb(51, 85, 255);
+    background-color: rg#fff;
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    width: 100%;
     align-items: center;
     border-radius: 8px;
-    box-shadow: 5px 15px 35px rgba(0,0,0,0.25);
+    box-shadow: 15px 15px 35px rgba(0,0,0,0.25);
 }
 .inputbox {
     position: relative;
@@ -365,7 +389,7 @@ li {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: white;
+    background-color: #fff;
     z-index: 1;
     height: 3px;
     border-radius: 4px;
