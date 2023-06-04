@@ -1,0 +1,214 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: poppins;
+    font-size: 13px;
+    text-transform: capitalize;
+    background-color: #23232a;
+}
+html {
+    scroll-behavior: smooth;
+}
+:root {
+    --skin-color: #2727b8;
+    --skin-colo-2: red;
+    --bg-grey: #fff;
+    --text-color-black-900: #111;
+    --text-color-white-900: #fff;
+    --text-color-white-700: #f2f2f2e1;
+    --text-color-black-700: #232425;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color:var(--text-color-black-900);
+}
+.fs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #23232a;
+    padding: 30px;
+}
+button {
+    padding: 10px 20px;    
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    margin-top: 10px;
+    transition: all 2s;
+}
+.styled-btn a {
+    color: var(--text-color-black-700);
+    position: relative;
+    padding-left: 10px;
+    width: 100%;
+}
+.styled-btn a::after {
+    content: ' ';
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    background: red;
+    left: -10px;
+}
+.styled-btn a::before{
+    content: ' ';
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    background: red;
+    left: -3px;
+}
+.title {
+    display: flex;
+    width: 100%;
+    padding: 5px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.title img {
+    height: 80px;
+    width: 80px;
+}
+.title h3 {
+    font-size: 18px;
+    color: var(--text-color-black-700);
+    padding-left: 10px;
+    font-weight: 400;
+}
+form {
+    display: block;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding:  40px 20px;
+    background-color: #fff;    
+}
+ .inputbox {
+    position: relative;    
+    margin-top: 20px;
+    width: 100%;
+}
+.inputbox label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px 10px 10px;
+    font-size: 1em;
+    pointer-events: none;
+}
+
+.inputbox .select {
+    position: relative;
+    width: 100%;
+    padding: 30px 10px 20px;   
+}
+.inputbox input {
+    position: relative;
+    width: 100%;
+    padding: 30px 10px 20px;
+    background: transparent;
+    border: none;
+    outline: none;
+    z-index: 10;
+    font-size: 1.2em;
+    text-transform: capitalize;
+    color: white;
+    font-weight: 600;
+    font-family: poppins;
+}
+.inputbox i { 
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #6b6e6b;
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    margin-bottom: 10px;
+}
+.inputbox input:valid ~ label, 
+.inputbox input:focus ~ label {
+    color: #747c76;
+    transform: translateY(-30px);
+}
+.inputbox input:valid ~ i, 
+.inputbox input:focus ~ i {
+    height: 44px;
+    background: #747c76;
+}
+.inputcheckbox {
+    margin: 15px 0; 
+    width: 100%;
+}
+.inputcheckbox span {
+    font-size: 14px;
+    pointer-events: none;    
+    color: #ca1414;
+   width: 100%;  
+}
+select {
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-transform: capitalize;    
+    outline: 0;
+}
+.otherlinks {
+    display: flex;
+    justify-content: space-between;
+}
+#submit{
+    border: 0;
+    outline: 0;
+    background: #3f403f;    
+    border-radius: 5px;
+    width: 100px;
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 5px;
+    padding: 7px 15px;
+    transition: 0.5s;
+    color: #fff;
+    text-transform: capitalize;
+}
+#submit:hover {
+    transform: translateY(-2px);    
+}
+@media screen and (max-width:768px) {
+    
+    .title img {
+        width: 50px;
+        height: 50px;
+    }
+    .title h3 {
+        font-size: 14px;
+    }
+    #submit {
+        font-size: 14px;
+        width: 70px;
+        padding: 0px;
+        height: 35px;
+    }
+    .container {
+        height: auto;
+    }
+    
+}
