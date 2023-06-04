@@ -552,17 +552,6 @@ p {
 
 
 @media screen and (max-width:768px) {
-    
-    .col-3 {  
-        flex: 0 0 40%;    
-       max-width: 40%;       
-    }
-    .row img {
-        padding: 0px;
-    }
-    }
-
-@media screen and (max-width:425px) {
  .fs {
     padding-left: 10px; 
 }
