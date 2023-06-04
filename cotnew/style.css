@@ -14,7 +14,6 @@ html {
 :root {
     --skin-color: #2727b8;
     --skin-colo-2: red;
-    --bg-grey: #fff;
     --text-color-black-900: #111;
     --text-color-white-900: #fff;
     --text-color-white-700: #f2f2f2e1;
@@ -401,7 +400,7 @@ p {
     font-size: 15px;
     text-align: left;
 }
-.footer-content .title  h3::after .col-6 h3::after{
+.footer-content .title  h3::after {
     content: ' ';
     position: absolute;
     height: 100%;
@@ -432,15 +431,18 @@ p {
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 50vh;     
     width: 50%;
     flex: 0 0 50%;
     overflow: hidden;   
     background-position: center;
 }
+
 .top {
     margin-top: 50px;
 }
+
 .imgcover{
     position: absolute;
     height: 100%;
@@ -513,14 +515,14 @@ p {
     margin: 10px;
     word-wrap: break-word;
     padding: 15px;
-    background-color: #a3a3a3fe;
+    background-color: #48494a;
     border-radius: 5px;
     text-transform: capitalize;
     transition: 1s;
 }
 
 .col-3:hover {
-    box-shadow: 0px 0px  10px rgb(87, 86, 86);
+    box-shadow: 0px 0px  10px rgba(0,0,0,0.4);
 
 }
 .col-3 a {
@@ -529,8 +531,9 @@ p {
     text-decoration: underline;
     
 }
+
 .col-3 h2  {    
-    color: var(--text-color-black-700);
+    color: var(--text-color-white-700);
     font-weight: 400;
     font-size: 19px;
     text-transform: uppercase;
@@ -538,7 +541,7 @@ p {
 }
 .col-3 h5 {
     
-    color: var(--text-color-black-700);
+    color: var(--text-color-white-900);
     font-weight: 400;
     font-size: 13px;
     
@@ -567,6 +570,9 @@ p {
 }
 .navmenu {
     display: flex;
+}
+.title {
+    width: 100%;
 }
 .menu {
     z-index: 3;
@@ -664,29 +670,34 @@ width: 100%;
     padding: 0px;
 }
 .goal {
-    height: 30vh;
+    height: auto;
     font-size: 20px;
+    font-family: 'Gabriela';
 }
 .rowcon {
     display: block;
 }
 .col {
-    display: block;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: auto;     
-    width: 80%;
-    flex: 0 0 80%;
+    width: 100%;
+    flex: 0 0 100%;
 }
 .ts .container {
     padding: 10px;
 }
 .imgcover {
-    height: 98%;
+    height: 100%;
 }
 
 .col-3 {  
     flex: 0 0 100%;
    max-width:100%;
-   height: 25vh;
+   padding-bottom: 20px;
+   height: auto;
 }
 .col-4 {    
     flex: 0 0 100%;
