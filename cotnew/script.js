@@ -5,7 +5,7 @@ let menu = document.querySelector(".menu")
 let nav = document.querySelector(".nav")
 let navmenu = document.querySelector(".navmenu")
 
-menu.addEventListener("click", () => {
+navmenu.addEventListener("click", () => {
     
     if (nav.style.top=="100%"){
         nav.style.top= "0px";                
