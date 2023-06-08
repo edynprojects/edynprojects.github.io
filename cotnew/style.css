@@ -22,7 +22,7 @@ html {
 }
 .hidden {
     opacity: 0;
-    transition: all 3s;
+    transition: all 2s;
     filter: blur(5px);
     transform: translateX(-100%);
 }
@@ -751,6 +751,18 @@ width: 100%;
 
 .row-4 {
     display: block;    
+}
+.delay:nth-child(1) {
+    transition-delay: 0s;
+}
+.delay:nth-child(2) {
+    transition-delay: 0s;
+}
+.delay:nth-child(3) {
+    transition-delay: 0s;
+}
+.delay:nth-child(4) {
+    transition-delay: 0s;
 }
 
 }
