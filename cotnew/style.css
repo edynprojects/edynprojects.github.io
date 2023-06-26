@@ -35,13 +35,13 @@ html {
     transition-delay: 1s;
 }
 .delay:nth-child(2) {
-    transition-delay: 1.5s;
-}
-.delay:nth-child(3) {
     transition-delay: 2s;
 }
+.delay:nth-child(3) {
+    transition-delay: 3s;
+}
 .delay:nth-child(4) {
-    transition-delay: 2.5s;
+    transition-delay: 4s;
 }
 li {
     list-style: none;
@@ -62,8 +62,9 @@ a {
     position: relative;
     background: linear-gradient(rgba(0,0,0,0.1), rgba(2, 38, 95, 0.812)),url(./img/hannah-busing-gktFjKSWAmA-unsplash.jpg);
     background-size: cover;
-    background-position-x: 200px;
-    background-position-y: center;
+
+ background-position-x: 200px;
+    background-position-y: center; 
 }
 .none {
     display: none;
@@ -119,7 +120,7 @@ button {
     
 }
 .nav-links ion-icon {
-    color: blue;
+    color: #111;
     left: -25px;
     position: absolute;
     font-weight: 500;
@@ -313,7 +314,7 @@ button {
     justify-content: center;
     text-align: center;
     width: 100%;
-    height: 50vh;
+    height: 100vh;
      background: linear-gradient(rgba(0,0,0,0.1), rgba(2, 38, 95, 0.812)),url(./img/pedro-lima-IkqhfoJjwSI-unsplash.jpg);
      background-size: cover;
      border-radius: 5px;
@@ -491,25 +492,26 @@ p {
 .ts {
     height: auto;
     width: 100%; 
+    
     margin: 50px 0;
 }
-.ts .title h1 {
+/* .ts .title h1 {
     font-size: 30px;    
     position: relative;
     color: var(--text-color-black-700);
-    padding-left: 30px;
+    
 }
 .ts .title h1::after {
     content: '';
-    width: 3px;
-    height: 100%;
+    width: 60px;
+    height: 3px;
     border-radius: 10px;
     background: var(--skin-color);
     position: absolute;
     bottom: 0;
-    left: 10px;
-}
-
+    left: 0;
+} */
+/*
 .ts .title h1::before {
     content: '';
     width: 3px;
@@ -519,7 +521,7 @@ p {
     position: absolute;
     bottom:- 10px;
     left: 0;
-}
+} */
 .circle-con {
     display: flex;
     justify-content: center;
@@ -531,7 +533,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #fff;
+    background: rgb(232, 232, 232);
     height: 70px;
     
     border-radius: 50%;
@@ -550,10 +552,11 @@ p {
     margin: 10px;
     word-wrap: break-word;
     padding: 15px;
-    background-color: #48494a;
+    border: 1px solid #999;
     border-radius: 5px;
     text-transform: capitalize;
     transition: 1s;
+    background-color: white;
 }
 
 .col-3:hover {
@@ -566,9 +569,14 @@ p {
     text-decoration: underline;
     
 }
-
+.col-3 ion-icon {
+    color: #111;
+    font-size: 28px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
 .col-3 h2  {    
-    color: var(--text-color-white-700);
+    color: black;
     font-weight: 400;
     font-size: 19px;
     text-transform: uppercase;
@@ -576,7 +584,7 @@ p {
 }
 .col-3 h5 {
     
-    color: var(--text-color-white-900);
+    color: var(--text-color-black-900);
     font-weight: 400;
     font-size: 13px;
     
@@ -586,6 +594,17 @@ p {
 
 
 
+.socialicons ion-icon {
+    color: #111;
+    font-size: 20px;
+    background: rgb(232, 232, 232);
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.socialicons ion-icon:hover {
+    transform: translateY(-3px);
+}
 
 
 
