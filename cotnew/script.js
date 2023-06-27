@@ -18,3 +18,15 @@ navmenu.addEventListener("click", () => {
     }
 }
 )
+// GREETNG JAVASCRIPT
+var greeting = document.getElementById("greeting");
+var time =new Date().getHours();
+if(time>18) {
+    greeting.innerHTML = " Hey! Good Evening!";
+}
+else if(time<12) {
+    greeting.innerHTML =` <h1>Hey! Good Morning!</h1> `
+}
+else{
+    greeting.innerHTML = " Hey! Good Day!";
+}
