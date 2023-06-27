@@ -251,8 +251,8 @@ button {
 .fs-cta h1 {
     font-size: 40px;
     color: var(--text-color-white-900);
-    font-weight: 500;
-    text-shadow: 3px 2px rgb(61, 97, 227);
+    font-weight: 700;
+    text-shadow: 4px 3px rgb(61, 97, 227);
     margin-bottom: 10px;
     text-align: left;
 }
@@ -260,10 +260,11 @@ button {
     color: var(--text-color-white-900);
     font-size: 35px;
     text-align: left;
-    font-weight: 400;
+    font-weight: 600;
     position: relative;
+    
     margin: 10px 0;
-    text-shadow: 2px 1px rgb(61, 97, 227);
+    text-shadow: 3px 2px rgb(61, 97, 227);
 }
 .fs-cta h3 {
     color: var(--text-color-white-700);
@@ -717,9 +718,9 @@ p {
 }
 .col-6 {
     text-transform: capitalize;
-    max-width: 40%;
+    max-width: 100%;
     margin: 10px;
-    flex: 0 0 40%;
+    flex: 0 0 100%;
     position: relative;
     display: block;
 } 
