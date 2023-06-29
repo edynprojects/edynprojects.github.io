@@ -30,25 +30,25 @@ html {
     transition-delay: 1s;
 }
 .fs-delay:nth-child(2) {
-    transition-delay: 2s;
+    transition-delay: 1.5s;
 }
 .fs-delay:nth-child(3) {
-    transition-delay: 3s;
+    transition-delay: 2s;
 }
 .fs-delay:nth-child(4) {
-    transition-delay: 4s;
+    transition-delay: 2.5s;
 }
 .fs-delay:nth-child(5) {
-    transition-delay: 5s;
+    transition-delay: 3s;
 }
 .fs-delay:nth-child(6) {
-    transition-delay: 6s;
+    transition-delay: 3.5s;
 }
 .fs-delay:nth-child(7) {
-    transition-delay: 7s;
+    transition-delay: 4s;
 }
 .fs-delay:nth-child(8) {
-    transition-delay: 8s;
+    transition-delay: 4.5s;
     text-align: center;
 }
 .show {
@@ -76,17 +76,23 @@ html {
 }
 .slideleft {
     animation-name: slideleft ;
-    animation-duration: 8s;
+    animation-duration: 4s;
     animation-delay: 1s;
     animation-fill-mode: forwards;
-    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+}
+.wa {
+    font-size: 20px;
+    color: white;
+    font-family: 'Gabriela', sans-serif;
+    font-weight: 500;
 }
 @keyframes slideleft {
-    from {
-        opacity: 1;
+    0% {
+        transform: translateX(100px);
     }
-    to {        
-        opacity: 0;
+    100% {        
+        transform: translateX(0);   
     }
 }
 .delay:nth-child(1) {
@@ -253,6 +259,7 @@ button {
     color: var(--text-color-white-900);
     font-weight: 700;
     text-shadow: 4px 3px rgb(61, 97, 227);
+    
     margin-bottom: 10px;
     text-align: left;
 }
@@ -262,7 +269,7 @@ button {
     text-align: left;
     font-weight: 600;
     position: relative;
-    
+    font-family: 'Gabriela', sans-serif;
     margin: 10px 0;
     text-shadow: 3px 2px rgb(61, 97, 227);
 }
@@ -396,7 +403,7 @@ button {
     cursor: pointer;    
     position: relative;
 }
-.styled-btn p{
+.styled-btn p, .styled-btn a{
     color: var(--text-color-black-700);
     position: relative;
     padding-left: 10px;
@@ -409,7 +416,7 @@ button {
     width: 100%;
     background-color: transparent;
 }
-.styled-btn p::after, .styled-btn2 a::after {
+.styled-btn p::after, .styled-btn a::after {
     content: ' ';
     position: absolute;
     height: 100%;
@@ -417,7 +424,7 @@ button {
     background: red;
     left: -10px;
 }
-.styled-btn p::before, .styled-btn2 a::before {
+.styled-btn p::before, .styled-btn a::before {
     content: ' ';
     position: absolute;
     height: 100%;

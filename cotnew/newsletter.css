@@ -110,6 +110,7 @@ form {
     color: var(--text-color-black-700);
     padding-left: 30px;
     margin-bottom: 30px;
+    font-family: 'Gabriela', sans-serif;
 }
 .title h1::after {
     content: '';

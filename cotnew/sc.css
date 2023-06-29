@@ -1,0 +1,63 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    text-transform:capitalize;    
+}
+html {
+    scroll-behavior: smooth;
+}
+:root {
+    --skin-color: #2727b8;
+    --skin-colo-2: red;
+    --bg-grey: #fff;
+    --text-color-black-900: #111;
+    --text-color-white-900: #fff;
+    --text-color-white-700: #f2f2f2e1;
+    --text-color-black-700: #232425;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color:var(--text-color-black-900);
+}
+
+.fs {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(./img/claudia-wolff-owBcefxgrIE-unsplash.jpg);  
+    background-size: cover;
+    background-position: top;
+    padding: 30px;
+}
+.fs .cta {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    border-left: 5px solid #fff;
+    border-radius: 8px;
+}
+.fs .cta h3 {
+    color: var(--text-color-white-700);
+    font-weight: 400;
+    font-size: 19px;
+    text-transform: uppercase;
+    font-family: gabriela;
+}
+.fs .cta h1 {
+    color: var(--text-color-white-900);
+    text-shadow: 2px 1px black;
+    /* text-shadow: 4px 3px rgb(61, 97, 227); */
+    font-family: gabriela;
+    font-size: 40px;
+    text-transform: capitalize;
+}

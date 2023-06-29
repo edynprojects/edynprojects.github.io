@@ -39,6 +39,7 @@ a {
     position: relative;
     color: var(--text-color-black-700);
     padding-left: 30px;
+    font-family: 'Gabriela', sans-serif;
     margin-bottom: 30px;
 }
 .title h1::after {
@@ -86,14 +87,7 @@ a {
     margin-bottom: 20px;   
     position: relative;
 }
-.title h1 {
-    color: var(--text-color-black-900);
-    font-weight: 900;
-    font-size: 40px;
-    text-transform: capitalize;
-    line-height: 45px;
-    margin-bottom: 20px;
-}
+
 .row {
     padding: 10px 20px;
     display: flex;   

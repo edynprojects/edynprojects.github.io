@@ -68,8 +68,17 @@
     text-transform: uppercase;
 }
 .rowtitle h1 {
-    font-size: 35px;
-    font-weight: 600;
+    color: var(--text-color-black-900);
+    font-weight: 900;
+    font-size: 40px;
+    text-transform: capitalize;
+    line-height: 45px;
+    padding-bottom: 15px;
+}
+.give-ts-title h5 {
+    color: var(--text-color-black-900);
+    font-weight: 900;
+    font-size: 25px;
     padding-bottom: 15px;
 }
 .give-ts {
@@ -87,9 +96,12 @@
     font-weight: 500;
 }
 .give-ts-title h1 {
-    color: #333;
-    font-weight: 700;
-    font-size: 25px;
+    color: var(--text-color-black-900);
+    font-weight: 900;
+    font-size: 40px;
+    text-transform: capitalize;
+    line-height: 45px;
+    margin-bottom: 20px;
 }
 .give-ts-col {
     flex: 0 0 50%;
@@ -101,6 +113,7 @@
     color: #333;
     font-weight: 600;
     position: relative;
+    margin-bottom: 5px;
 }
 .give-ts-col h2::after {
     content: '';

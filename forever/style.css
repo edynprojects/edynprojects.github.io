@@ -58,6 +58,7 @@ section {
     display: none;
    }
    .slideleft {
+    
     animation: slideleft 1s linear forwards;
 }
 @keyframes slideleft {
