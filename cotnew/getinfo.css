@@ -1,0 +1,132 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    
+}
+html {
+    scroll-behavior: smooth;
+}
+:root {
+    --skin-color: #2727b8;
+    --skin-colo-2: red;
+    --text-color-black-900: #111;
+    --text-color-white-900: #fff;
+    --text-color-white-700: #f2f2f2e1;
+    --text-color-black-700: #232425;
+
+}
+#greeting{
+    border-bottom: 1px solid #fff;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 100px;
+    color: #fff;
+    font-size: 30px;
+    font-family: 'Gabriela', sans-serif;
+}
+
+p {
+    margin-bottom: 30px;
+    color: red;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 17px;
+}
+.getinfo {
+    background: #23242a;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    position: relative;
+}
+.inputbox {
+    position: relative;        
+    padding: 0px 50px;
+    width: 100%;
+}
+.inputbox label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #fff;
+    padding: 10px 10px 10px;
+    font-size: 1em;
+    pointer-events: none;
+}
+.inputbox input {
+    position: relative;
+    width: 100%;
+    padding: 30px 100px 20px;
+    background: transparent;
+    border: 0;
+    outline: none;
+    z-index: 10;
+    font-size: 1.2em;
+    text-transform: capitalize;
+    color: #111;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+.inputbox i { 
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    margin-bottom: 10px;
+}
+.inputbox input:valid ~ label, 
+.inputbox input:focus ~ label {
+    color: #fff;
+    transform: translateY(-30px);
+}
+.inputbox input:valid ~ i, 
+.inputbox input:focus ~ i {
+    height: 44px;
+    background: #ffffff;
+}
+.otherlinks {
+    display: flex;
+    justify-content: space-between;
+}
+#submit{
+    border: 0;
+    outline: 0;
+    background: #fff;    
+    border-radius: 5px;
+    width: 100%;
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 5px;
+    padding: 7px 15px;
+    transition: 0.5s;    
+    text-transform: capitalize;
+}
+#submit a {
+    color: #111;
+    text-decoration: none;
+}
+#submit:hover {
+    transform: translateY(-2px);    
+}
+@media screen  and (max-width: 425px)  {
+    .inputbox input{
+        padding: 30px 20px 20px;
+    }
+}
