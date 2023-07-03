@@ -13,20 +13,29 @@ dark.addEventListener("click", ()=> {
 })
 //NAVIGATION JAVACRIPT CODES.
 let navMenu = document.querySelector(".navmenu")
-let navLinks = document.querySelector(".nav-links")
+let navLinks = document.querySelectorAll(".nav-links")
 let nav = document.querySelector(".nav")
 
 
 navMenu.addEventListener("click", ()=> {
     if(nav.style.bottom == "100%"){
-        nav.style.top = "0%"        
+        nav.style.bottom = "0%"
         console.log("closed")
     }
     else {
         nav.style.bottom = "100%"
+        
         console.log("opened")
     }
 
+})
+navLinks.forEach(navlink => {
+    let navli = navlink.querySelector(".nav-links li")
+    navli.addEventListener("click", ()=> {
+        nav.style.bottom = "100%"
+        console.log("nav closed")
+    })
+    
 })
 
 // GREETING JAVASCIPT CODES.

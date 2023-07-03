@@ -109,7 +109,7 @@ html {
 }
 .wa {
     font-size: 20px;
-    color: var(--text-color-black-900);
+    color: #111;
     font-family: 'Gabriela', sans-serif;
     text-transform: capitalize;
     font-weight: 500;
@@ -247,16 +247,17 @@ button {
     display: grid;
     place-content: center;
     transition: 0.5s;
+    z-index: 100;
 }
 .darkmode dark-btn:hover {
     animation: rotate 2s linear forwards infinite;
 }
 @keyframes rotate {
     0% {
-        transform: rotate(180deg);
+        transform: rotate(0deg);
     }
     100% {
-        transform: rotate(0deg);
+        transform: rotate(360deg);
     }
 }
 .navigation {
@@ -275,6 +276,7 @@ button {
 }
 .navbar {
     display: none;
+    z-index: 100;
 }
 .nav-links ul {
     display: flex;
@@ -294,6 +296,7 @@ button {
     font-size: 19px;
     padding: 0px 0px 0px 4px ;    
     border-bottom: 1px solid #999;
+    z-index: 104;
 }
 .nav-links a::after ,.footer .title h4::after{
     content: '';
@@ -363,7 +366,7 @@ button {
 }
 .fs-cta h1 {
     font-size: 40px;
-    color: var(--text-color-black-900);
+    color: #111;
     font-weight: 500;
     position: relative;
     z-index: 2;
@@ -390,7 +393,7 @@ button {
     color: red;
 }
 .fs-cta h2 {
-    color: var(--text-color-black-700);
+    color: #111;
     font-size: 35px;
     text-align: left;
     font-weight: 500;
@@ -402,7 +405,7 @@ button {
     text-transform: uppercase;
 }
 .fs-cta h3 {
-    color: var(--text-color-black-700);
+    color: #111;
     font-size: 15px;
     font-weight: 400;
     position: relative;
@@ -410,7 +413,7 @@ button {
 }
 
 .fs-cta h4 {
-    color: var(--text-color-black-700);
+    color: #111;
     font-size: 15px;
     font-weight: 400;
     position: relative;
@@ -801,6 +804,8 @@ p {
     }
     .bg  {
         position: absolute;
+        top: 100px;
+        left: 0;
     }
     .fs-con {
         display: grid;        
@@ -858,9 +863,9 @@ p {
     display: grid;
     place-items: center;
     background: #777;        
-    z-index: 100000;
+    z-index: 10;
     transition: 1s;
-    padding-top: 50px;
+    /* padding-top: 50px; */
     position: fixed;
     overflow: auto;
 }
@@ -911,7 +916,7 @@ p {
 .nav-links li{
     padding: 20px 40px;
     color: white;
-    text-align: center;
+    text-align: left;
     width: 100%;
     border-bottom: .5px solid #999;
 }
@@ -920,18 +925,19 @@ p {
     z-index: 100000;
     text-align: center;
 }
-  /* .nav-links ul li a:hover {
-    font-size: 21px;
-} */
 .nav-links {
+    display: grid;
+    place-items: center;
+    padding: 0px 30px;
     
-    position: relative;
-    
+    position: absolute;
+    height: 100%;
+    width: 100%;
 }
 .nav-links ul {
     display: block;
     color: white;
-    
+    width: 100%;
 }
 .nav-links ion-icon {
     color: white;
@@ -1027,7 +1033,7 @@ p {
     padding: 20px;
 }
 .fs {
-    background-position-x: 40%;
+    background-position-x: 36%;
         background-position-y: 10vh;
 }
 .btncon {
