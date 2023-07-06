@@ -25,7 +25,7 @@ function handleButtonClicked(event) {
 
                 let inputValue = getname.value
                 localStorage.setItem("inputValue", inputValue)
-                window.location.href = "homepage.html"
+                window.location.href = "hom.html"
                 
                 console.log(inputValue)                
                 console.log("VALID LINK!!")

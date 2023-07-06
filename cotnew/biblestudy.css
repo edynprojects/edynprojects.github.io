@@ -20,8 +20,12 @@ html {
     --text-color-white-700: #f2f2f2e1;
     --text-color-black-700: #232425;
 }
+ul {
+    padding-left: 10px;
+}
 li {
-    list-style: none;
+    padding: 10px 0;
+    list-style-type: disc;
 }
 a {
     text-decoration: none;
