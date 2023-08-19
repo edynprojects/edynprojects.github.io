@@ -1,0 +1,194 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+section {
+height: 100vh;
+width: 100%;
+}
+.navigation {
+    top: 20px;
+    left: 0;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;    
+    height: auto;
+    z-index: 9999999;    
+}
+.navigation .hidden {
+    transform: translateY(-100%);
+}
+header {
+    border: 1px solid #dcdbdb;
+    border-bottom: 0px;
+    border-radius: 20px;
+    height: 10vh;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    padding: 5px 20px;
+    border-bottom: 2px solid blue;
+    
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    position: relative;
+    align-items: center;
+    width: 100%;
+}
+.logo img {
+    width: 40px;
+}
+.nav-links {
+    height: auto;    
+}
+nav .nav-links ul{
+    display: flex;
+    gap: 20px;
+    padding-right: 50px;
+    align-items: center;
+}
+nav .nav-links ul li {
+    list-style: none; 
+    width: 150px;   
+    
+    text-align: center;
+}
+nav .nav-links ul li a::after {
+    content: '';
+    height: 2px;
+    border-radius: 30px;
+    width: 0%;
+    position: absolute;
+    left: 0;
+    transition: all 1s;
+    bottom: -2px;
+    background-color: blue;
+}
+nav .nav-links ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #111;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+nav .nav-links ul li a:hover::after {
+    width: 100%;
+}
+nav .nav-links ul li ion-icon {
+    font-size: 14px;
+    color: #555;
+}
+nav .nav-links ul .link-dropdown {
+    position: relative;
+    text-align: center;
+}
+nav .nav-links ul .dropdown  li {
+    text-align: left !important;
+    padding: 6px 10px;
+    font-size: 14px;        
+    border-bottom: 1px solid #b8b8b8;
+    margin-top: 10px;
+    width: 100%;
+    transition:  0.2s;
+    color: #111 !important;
+}
+nav .nav-links ul .dropdown  li {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;        
+    color: #111 !important;
+}
+nav .nav-links ul .dropdown  a::after {
+    position: relative;
+}
+nav .nav-links ul .dropdown li:hover  {
+    color: #fff  !important;
+    background-color: #30449fdf;
+    border-radius: 8px;
+}
+nav .nav-links ul .dropdown li:hover > a {
+    color: #fff ;
+}
+nav .nav-links ul .link-dropdown .dropdown {
+    width: 300px;
+    padding: 10px;
+    top: 50px;
+    left: 0px;
+    position: absolute;
+    background-color: #f7f6f6;
+    padding: 20px;    
+    border-radius: 10px;
+    display: none;
+}
+.nav-open {
+    display: block !important;
+}
+@media screen and (max-width: 768px) {
+    
+    nav .nav-links ul{
+        display: block;
+        padding-left: 0px;
+        padding-top: 100px;
+        padding-right: 0;
+    }
+    .fliter {
+        filter: blur(20px);
+    }
+    nav .nav-links {
+        background-color: #777;
+        width: 100%;        
+        position: absolute;
+        height: 0;        
+        transition: 1s;        
+        overflow: scroll;
+        align-items: flex-start;
+        right: -11%;
+        top: -31px;
+    }
+    nav .nav-links ul li {        
+        width: 100%;           
+        text-align: left;
+    }
+    nav .nav-links ul li a {
+        color: #fff;        
+        font-size: 16px;
+    }
+    nav .nav-links ul li ion-icon {
+        float: right;
+    }
+    nav .nav-links ul .link-dropdown {
+        position: relative;
+        
+        /* margin: 10px 0;
+         */
+        
+    }
+    nav .nav-links ul .dropdown li {
+        padding-left: 30px;
+        font-size: 16px;    
+        margin-top: 20px;
+        width: 100%;
+        color: #fff !important;
+    }
+    
+    nav .nav-links ul .link-dropdown .dropdown {
+        width: 100%;
+        top: 0px;
+        left: 0px;
+        
+        background-color: #777;
+        
+    }
+    nav .nav-links ul .link-dropdown .dropdown {
+        position: relative;
+    }
+    
+}

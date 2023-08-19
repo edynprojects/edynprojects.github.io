@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="worship.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Delius&family=Gabriela&family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,400;1,500;1,600;1,700;1,900&family=Roboto&display=swap" rel="stylesheet">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+</head>
+<body>
+<div class="fs-worship">
+    <div class="fs-worship-container">
+        <div class="fs-worship-cta">
+            <h1>Worship Online</h1>
+        </div>
+    </div>
+</div>
+<section class="ts-worship">
+    <div class="container">
+        <div class="title">
+            <h3>Worship Online</h3>
+            <h1>Countdown to next live worship</h1>
+        </div>
+        <div class="row">
+            <div class="col-countdown">               
+                <div class="col-countdown-con">
+                <div class="col-countdown-con-title">
+                    <h3>WATCH LIVE</h3>
+                    <h2>SUNDAYS AT 8AM - 11AM</h2>
+                    <h2 class="ongoing"></h2>
+                </div>
+                    <div class="time-con">
+                        <div class="days">
+                            <div class="days-number"></div>
+                            <div class="days-text">Days</div>
+                        </div>
+                        <div class="hours">
+                            <div class="hours-number"></div>
+                            <div class="hours-text">Hours</div>
+                        </div>
+                        <div class="minutes">
+                            <div class="minutes-number"></div>
+                            <div class="minutes-text">Minutes</div>
+                        </div>
+                        <div class="seconds">
+                            <div class="seconds-number"></div>
+                            <div class="seconds-text">Seconds</div>
+                        </div>
+                    </div>    
+            </div>
+            
+        </div>
+        <div class="col-information">
+            <div class="con">
+                <div class="col-information-date col-info">
+                    <div class="col-info-con">
+                                <ion-icon name="calendar-outline"></ion-icon>
+                                <h4>Date:</h4>
+                            </div>
+                    <p>August 12, 2023.</p>
+                </div>
+                <div class="col-information-time col-info">
+                    <div class="col-info-con">
+                        <ion-icon name="alarm-outline"></ion-icon>
+                        <h4>Time:</h4>
+                    </div>
+                    <p>8PM - 11AM</p>    
+                </div>
+                        <div class="col-information-location col-info" id="height">
+                            <div class="col-info-con">
+                                <ion-icon name="navigate-circle-outline"></ion-icon>  
+                                <h4>Location:</h4>
+                            </div>
+                             <p> RCCG COT AREA HEADQUARTER</p>
+                        </div>
+                  <div class="col-information-highlight col-info"   id="height">
+                    <div class="col-info-con ">
+                        <ion-icon name="reader-outline"></ion-icon>
+                        <h4>Information:</h4>
+                    </div>
+                     <p>Thanksgiving Service</p>
+                  </div>
+                    
+                    <div class="ts-btn-con col-info " id="height">
+                        <button class="calendar-btn"><ion-icon name="add-outline"></ion-icon>Add to Google Calendar</button>                            
+                        <button class="live-btn"><ion-icon name="videocam-outline"></ion-icon>Live</button>
+                    </div>
+                    
+        </div>
+            </div>
+    </div>
+</section>
+    <section class="ss" id="sermons">
+        <div class="container">
+            <div class="title">
+                <h1 class="center">Previous Messages</h1>
+                <div class="btn-con">
+                    <select id="selectSpeaker" name="
+                    speaker">
+                    <option value=" ">Select Speaker</option>
+                <option value="Emmanuel Onasanya" class="option-btn">Emmanuel Onasanya</option>
+                <option value="Philp Solomon" class="option-btn">Philp Solomon</option>
+                <option value="Samuel Akinaso<" class="option-btn">Samuel Akinaso</option>
+                <option value="Elijah Oluwatayo" class="option-btn">Elijah Oluwatayo</option>
+                <option value="Rose Kelvin" class="option-btn">Rose Kelvin</option></select>
+                <select id="selectTopic" name="
+                    spaker" >
+                    <option value=" ">All Topic</option>
+                <option value="Friends" class="option-btn">Friends</option>
+                <option value="Jesus Reign" class="option-btn">Jesus Reign</option>
+                <option value="Unlikely Friends" class="option-btn">Unlikely Friends</option>
+                </select>                
+                </div>
+            </div>
+            <div class="contents">
+            
+      </div>
+        </div>
+    </section>
+    
+    <script src="worshiponline.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>
+</html>

@@ -1,0 +1,513 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --skin-color: #2727b8;
+    --skin-colo-2: red;
+    --text-color-black-900: #111;
+    --text-color-white-900: #fff;
+    --text-color-white-700: #f2f2f2e1;
+    --text-color-black-700: #232425;
+    --bg-blackk: #fff;
+    --bg-col-blackk: #fff;
+    --border-: 1px solid #999;
+    --border-black: 1px solid #fff;
+    --text-color-white-footer-900: #fff;
+    --text-color-white-footer-700: #f2f2e1;
+    --dark-bg-lg: linear-gradient(transparent,rgba(15, 150, 234, 0.792));
+    --service-col: #f1f1f1;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    color: var(--text-color-black-900);
+    background-color: var(--bg-blackk);
+}
+body.darkmode {
+    --skin-color: #2727b8;
+    --skin-colo-2: red;
+    --bg-blackk: #23242a;
+    --text-color-white-900: #111;
+    --text-color-black-900: #fff;
+    --text-color-black-700: #f2f2f2e1;
+    --text-color-white-700: #232425;
+    --bg-col-blackk: #3c3d3f;
+    --border-: 0;
+    --text-color-white-footer-900: #fff;
+    --text-color-white-footer-700: #f2f2e1;
+    --dark-bg-lg: linear-gradient(transparent,rgba(0,0,0,0.7));
+    --border-black: 1px solid #fff;
+    --service-col: #3c3d3f;
+}
+html {
+    scroll-behavior: smooth;
+}
+.fs-worship {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(0,0,0,0.9),transparent), url(/img/IMG_9855.JPG);
+    background-size: cover;
+    background-position: center;
+}
+.fs-worship .fs-worship-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fs-worship .fs-worship-cta h1 {
+    font-size: 70px;
+    color: #fff;
+    position: relative;
+    text-shadow: 1px 1px 6px black;
+}
+.fs-worship .fs-worship-cta h1::after{
+    content: ' ';
+    position: absolute;
+    height: 5px;
+    width: 70%;
+    text-align: center;
+    left: 50%;
+    top: calc(100% + 10px);
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+}
+.contents {
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.audio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icons {
+    display: flex;
+    border: 1px solid #ccc;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    
+}
+
+.icons button {
+    padding: 5px;
+    font-size: 25px;
+    
+    color: #666969;
+    border: 0;
+    font-weight: normal;
+}
+.contents-con{
+    width: 400px;
+    height: auto;
+    background-color: #f1f1f1;
+    padding: 10px;
+}
+.hl {
+    border: 1px solid #ccc;
+}
+.img-con img  {
+    width: 100%;
+}
+.informations {
+    padding: 10px;
+}
+.info-header {
+    display: flex;
+    justify-content: space-between;    
+}
+.date-text, .topic, .speaker, .scripture, .aim {
+    font-weight: 500;
+    font-size: 13px;
+    color: #23242a;
+    text-transform: capitalize;
+    margin-bottom: 10px;   
+    position: relative;
+}
+.speaker {
+    font-size: 18px;
+    font-weight: 600;
+    color: #3c3d3e;
+}
+.aim {
+    font-weight: 500;
+    font-size: 15px;
+    text-transform: uppercase;
+    text-align: left;
+    color: #17a9b7;
+}
+.title {    
+    margin: 10px;
+    padding: 10px;
+}
+.cta h1 {
+    font-size: 30px;    
+    color: #fff;
+}
+ .date  {
+    font-size: 20px;    
+    position: relative;
+    color: var(--text-color-black-700);
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 30px;
+}
+.title h1 {
+    font-size: 30px;    
+    position: relative;
+    color: var(--text-color-black-700);
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+.center {
+    text-align: center;
+}
+.title h2 {
+    color: var(--text-color-black-700);
+    font-weight: 700;
+    font-size: 22px;
+    text-transform: uppercase;
+    margin-bottom: 20px;   
+}
+
+.title h3 {
+    color: var(--text-color-black-700);
+    font-weight: 400;
+    font-size: 19px;
+    text-transform: uppercase;
+    margin-bottom: 10px;   
+}
+
+.title h4 {
+    color: var(--skin-color);
+    font-weight: 900;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 20px;   
+    position: relative;
+}
+.btn-con {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+.ss-worship {
+    /* display: flex; */
+    padding: 20px;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.ss-worship .row {
+    display: flex;
+    background: #ccc;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.col-text-con {
+    padding: 100px;
+    color: #fff;
+}
+.col-text-con h1 {
+    font-size: 35px;    
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
+    text-align: center;
+    text-transform: capitalize;
+}
+.col-text-con h1::after{
+    content: ' ';
+    position: absolute;
+    height: 2px;
+    width: 46px;
+    text-align: center;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -50%);
+    background-color: #17a9b7;
+}
+.ss-worship .title h1 {
+    font-size: 40px;    
+    position: relative;
+    color: var(--text-color-black-700);
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+.ts-worship {
+    padding: 20px;
+    height: 100vh;
+    width: 100%;
+}
+.ts-worship .row {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    /* background: red; */
+    
+    padding:  0 20px;
+}
+.ts-worship .col-information {
+    max-width: 30%;
+    flex: 0 0 30%;
+    padding: 20px;
+    background-color: #17a9b7;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+}
+.ts-worship .col-information .col-info {
+    background-color: #fff;
+    border-radius: 4px;   
+    height: 65px;
+    text-align: right;
+    margin: 20px auto;
+    padding: 6px 15px;
+    display: grid;
+    place-items: center;
+    color: #fff;
+}
+.ts-worship .col-information .col-info .col-info-con {
+    display: flex;
+}
+.ts-worship .col-information .ts-btn-con {
+    display: flex;
+}
+.ts-worship .col-information .col-info .col-info-con h4 {
+    font-size: 17px;
+    color: #3c3d3e;
+    margin-bottom: 5px;
+}
+.ts-worship .col-information .col-info  p {
+    font-size: 14px;
+    color: #23242a;
+}
+.ts-worship .col-information .col-info .col-info-con ion-icon {
+    font-size: 24px;
+    margin-right: 6px;
+    transform: translateY(1px);
+    color: #17a9b7;
+}
+.ts-worship .col-information .col-info button {
+    border: 1px solid #17a9b7;
+    background: transparent;
+    padding: 7px 10px;
+    transition: .5s;
+    font-size: 15px;
+}
+.ts-worship .col-information .col-info button:hover,.ts-worship .col-information .col-info button:hover ion-icon  {
+    background: #17a9b7;
+    color: #fff;
+}
+.ts-worship .col-information .col-info button ion-icon {
+    font-size: 18px;
+    margin-right: 6px;
+    transform: translateY(4px);
+    color: #17a9b7;
+}
+.red-text {
+    color: red;
+}
+.ts-worship .col-countdown {
+    max-width: 70%;
+    flex: 0 0 70%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #17a9b7;
+    height: 400px;
+}
+.ts-worship .col-countdown
+.time-con {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 300px;
+    width: 100%;
+    padding:  0px 10px;
+    position: relative;
+}
+.ts-worship .col-countdown
+.time-con::before{
+    content: ' ';
+    position: absolute;
+    height: 2px;
+    width: 46px;
+    text-align: center;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -50%);
+    background-color: #17a9b7;
+}
+.ts-worship .col-countdown
+.time-con::after{
+    content: ' ';
+    position: absolute;
+    height: 10px;
+    border-radius: 10px;
+    width: 50%;
+    text-align: center;
+    left: 50%;
+    top: 75%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+}
+ 
+.ts-btn-con {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.days-number, .hours-number, .seconds-number, .minutes-number {
+    font-size: 50px;
+    text-shadow: 3px 2px #282830;
+    color: #fff;
+    font-weight: 600;
+}
+.days-text, .hours-text, .seconds-text, .minutes-text {
+    color: #f1f1f1;
+}
+.col-countdown h3 {
+    color: #fff;
+    font-weight: 400;
+    font-size: 17px;
+    text-transform: uppercase;
+    margin-bottom: 20px;   
+}
+.col-countdown h2{
+    color: #fff;
+    font-weight: 700;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-bottom: 10px;   
+}
+.left {
+    text-align: left !important;
+}
+@media screen and (max-width: 768px) {
+    .ts-worship .row {
+        display: block;
+        
+        padding:  0 20px;
+    }
+    .ts-worship .col-countdown {
+        max-width: 100%;
+        flex: 0 0 100%;
+        margin-bottom: 50px;
+    }
+    .ts-worship .col-information {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+    .ts-worship .col-information .col-info {        
+        width: inherit;
+        
+    }
+    .ts-worship {        
+        height: auto;        
+    }
+    .ts-worship  .con {
+        padding: 10px 30px;
+        width: 100%;        
+    }
+}
+@media screen and (max-width: 652px) {
+    
+    .ts-worship .col-countdown
+.time-con {
+    gap: 60px;
+}
+.days-number, .hours-number, .seconds-number, .minutes-number {
+    font-size: 40px;    
+}
+.fs-worship .fs-worship-cta h1 {
+    font-size: 50px;
+    color: #fff;
+    position: relative;
+    text-shadow: 1px 1px 6px black;
+}
+}
+@media screen and (max-width: 485px) {
+    .ts-worship .col-countdown {
+        height: auto;
+    }
+    .ts-worship .col-countdown
+.time-con {
+    gap: 30px;
+}
+.ts-worship  .con {
+    padding: 10px 10px;
+    width: 100%;        
+}
+.ts-worship  .con {
+    padding: 10px 10px;
+    width: 100%;        
+}
+.days-number, .hours-number, .seconds-number, .minutes-number {
+    font-size: 40px;    
+}
+.fs-worship .fs-worship-cta h1 {
+    font-size: 40px;
+}
+}
+@media screen and (max-width: 441px) {
+    .ts-worship {
+        padding: 0px;
+    }
+#height {
+    height: 100px;
+}
+
+}
+@media screen and (max-width: 360px) {
+    .ts-worship .col-countdown
+.time-con {
+    gap: 30px;
+}
+.ts-worship  .con {
+    padding: 10px 10px;
+    width: 100%;       
+    
+}
+.ts-worship .col-information {
+    max-width: 100%;
+    flex: 0 0 100%;
+    height: auto;
+}
+.ts-worship  .con {
+    padding: 10px 10px;
+    width: 100%;        
+}
+.days-number, .hours-number, .seconds-number, .minutes-number {
+    font-size: 30px;    
+}
+.fs-worship .fs-worship-cta h1 {
+    font-size: 30px;
+}
+.contents-con{
+    width: inherit;
+    height: auto;
+    background-color: #f1f1f1;
+    padding: 10px;
+}
+
+}
