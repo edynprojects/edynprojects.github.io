@@ -216,7 +216,7 @@ const selectedSpeaker = selectSpeaker.value
 
                 </div>
             <div class = "audio"> <audio controls 
-            audio src="/Worship Section/audio/EH_EH_EH_EH_HALLELUYAH____UNTO_THE_LAMB_UPON_THE_THRONE____Theophilus_Sunday____MSconnect_Worship(128k).m4a"
+            audio src="../Worship Section/audio/EH_EH_EH_EH_HALLELUYAH____UNTO_THE_LAMB_UPON_THE_THRONE____Theophilus_Sunday____MSconnect_Worship(128k).m4a"
             ></audio>
             </div>
                 <div class="icons">
