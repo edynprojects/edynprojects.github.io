@@ -100,20 +100,7 @@ const GottenName = document.getElementsByClassName("GottenName")
 nameDisplay.innerHTML =  `<span class="wa" >God Bless You  ${localStorage.getItem('inputValue')}!</span>`
 //DARKMODE JAVASCRIPT
  
-const dark = document.querySelector(".dark")
-window.addEventListener("load", ()=> {
-    if(document.body.classList.contains("dark")) {
-        dark.querySelector("i").classList.add("fa-sun")
-    }
-    else {
-        dark.querySelector("i").classList.add("fa-moon")
-    }
-})
-dark.addEventListener("click", ()=> {
-    document.body.classList.toggle("darkmode")
-    dark.querySelector("i").classList.toggle("fa-sun")
-    dark.querySelector("i").classList.toggle("fa-moon")
-})
+
 
 document.addEventListener("DOMContentLoaded", function() {
 const dropdownItem = document.querySelector(".dropdown-item")

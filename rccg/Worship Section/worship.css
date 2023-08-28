@@ -91,7 +91,7 @@ html {
 }
 .icons {
     display: flex;
-    border: 1px solid #ccc;
+    
     padding: 10px;
     justify-content: center;
     align-items: center;
@@ -272,7 +272,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 500px;
+    height: auto;
 }
 .ts-worship .col-information .col-info {
     background-color: #fff;

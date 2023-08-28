@@ -1,40 +1,33 @@
-var greeting = document.getElementById("greeting");
-var time =new Date().getHours();
+
+const greeting = document.querySelector(".time");
+const time =new Date().getHours();
 if(time>18) {
-    greeting.innerHTML =` <span class="wa"> Hey! Good Evening!</span> `;
+    greeting.innerHTML = "Good Evening";
 }
 else if(time<12) {
-    greeting.innerHTML =` <span class="wa">Hey! Good Morning!</span> `
+    greeting.innerHTML = "Good Morning";
 }
 else{
-    greeting.innerHTML = ` <span class="wa">Hey! Good Day!</span> `
+    greeting.innerHTML = "Good Day";
 }
 
-let getname = document.querySelector("#getname")
+let getname = document.querySelector('.inputDiv')
+let submit = document.querySelector(".submit")
+let link = document.querySelector(".submit a")
+let check = document.querySelector(".validity")
 
-let submit = document.querySelector("#submit")
-let link = document.querySelector("#link")
-let check = document.querySelector(".check")
-submit.addEventListener("click", handleButtonClicked);
 function handleButtonClicked(event) {
     event.preventDefault()
-    
-    if(getname.checkValidity()===true){
-                 console.log("hey")
-                check.style.color="green"
-
+    if(getname.checkValidity() === true){                
+                check.style.color = "green"
                 let inputValue = getname.value
                 localStorage.setItem("inputValue", inputValue)
-                window.location.href = "hom.html"
-                
-                console.log(inputValue)                
-                console.log("VALID LINK!!")
-                
+                window.location.href = "../Home Section/hom.html"
             }     
             else {
-                alert("Sorry please provide a NAME!")
-                check.style.color="red"
-                console.log("INVALID LINK!!")
+                alert("Sorry Kindly Provide A Name!")
+                check.style.color="red"                
             }
 
 }
+submit.addEventListener("click", handleButtonClicked);

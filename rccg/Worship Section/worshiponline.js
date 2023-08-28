@@ -56,7 +56,7 @@
 const worship = [
     {
         id: 1,
-        img: "/img/personface2.jpg",
+        img: "../img/personface2.jpg",
         date: "July 23rd, 2023",
         topic: "Unlikely Friends",
         speaker: "Emmanuel Onasanya",
@@ -65,7 +65,7 @@ const worship = [
     },
     {
         id: 2,
-        img: "/img/personface1.jpg",
+        img: "../img/personface1.jpg",
         date: "July 3rd, 2023",
         topic: "Unlikely Friends",
         speaker: "Philp Solomon",
@@ -74,7 +74,7 @@ const worship = [
     },
     {
         id: 3,
-        img: "/img/personface2.jpg",
+        img: "../img/personface2.jpg",
         date: "July 23rd, 2023",
         topic: "Friends",
         speaker: "Emmanuel Onasanya",
@@ -83,7 +83,7 @@ const worship = [
     },
     {
         id: 1,
-        img: "/img/personface3.jpg",
+        img: "../img/personface3.jpg",
         date: "August 23rd, 2023",
         topic: "Jesus Reign",
         speaker: "Rose Kelvin",
@@ -92,7 +92,7 @@ const worship = [
     },
     {
         id: 3,
-        img: "/img/personface1.jpg",
+        img: "../img/personface1.jpg",
         date: "July 3rd, 2023",
         topic: "Jesus Reign",
         speaker: "Elijah Oluwatayo",
@@ -101,7 +101,7 @@ const worship = [
     },
     {
         id: 4,
-        img: "/img/personface2.jpg",
+        img: "../img/personface2.jpg",
         date: "July 23rd, 2023",
         topic: "Unlikely Friends",
         speaker: "Philp Solomon",
@@ -110,7 +110,7 @@ const worship = [
     },
     {
         id: 5,
-        img: "/img/personface2.jpg",
+        img: "../img/personface2.jpg",
         date: "July 23rd, 2023",
         topic: "Unlikely Friends",
         speaker: "Rose Kelvin",
@@ -119,7 +119,7 @@ const worship = [
     },
     {
         id: 6,
-        img: "/img/personface2.jpg",
+        img: "../img/personface2.jpg",
         date: "July 23rd, 2023",
         topic: "Unlikely Friends",
         speaker: "Philp Solomon",
@@ -129,7 +129,7 @@ const worship = [
     
     {
         id: 5,
-        img: "/img/personface2.jpg",
+        img: "../img/personface2.jpg",
         date: "July 23rd, 2023",
         topic: "Jesus Reign",
         speaker: "Emmanuel Onasanya",
@@ -139,7 +139,7 @@ const worship = [
     
     {
         id: 6,
-        img: "/img/personface2.jpg",
+        img: "../img/personface2.jpg",
         date: "July 23rd, 2023",
         topic: "Unlikely Friends",
         speaker: "Elijah Oluwatayo",
@@ -149,7 +149,7 @@ const worship = [
     
     {
         id: 7,
-        img: "/img/personface2.jpg",
+        img: "../img/personface2.jpg",
         date: "July 23rd, 2023",
         topic: "Unlikely Friends",
         speaker: "Samuel Akinaso",
@@ -158,7 +158,7 @@ const worship = [
     },
     {
         id: 8,
-        img: "/img/personface2.jpg",
+        img: "../img/personface2.jpg",
         date: "July 23rd, 2023",
         topic: "Jesus Reign",
         speaker: "Samuel Akinaso",
@@ -168,7 +168,7 @@ const worship = [
     
     {
         id: 9,
-        img: "/img/personface2.jpg",
+        img: "../img/personface2.jpg",
         date: "July 23rd, 2023",
         topic: "Friends",
         speaker: "Samuel Akinaso",
@@ -216,7 +216,7 @@ const selectedSpeaker = selectSpeaker.value
 
                 </div>
             <div class = "audio"> <audio controls 
-            audio src="../Worship Section/audio/EH_EH_EH_EH_HALLELUYAH____UNTO_THE_LAMB_UPON_THE_THRONE____Theophilus_Sunday____MSconnect_Worship(128k).m4a"
+            audio src=""
             ></audio>
             </div>
                 <div class="icons">

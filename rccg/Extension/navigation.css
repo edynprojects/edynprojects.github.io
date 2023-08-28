@@ -7,19 +7,52 @@ section {
 height: 100vh;
 width: 100%;
 }
-.navigation {
-    top: 20px;
-    left: 0;
-    padding: 5px;
+.on-load  {
+    display: fixed !important;
+    background: #fff;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: fixed;
-    width: 100%;    
-    height: auto;
-    z-index: 9999999;    
+    width: 100%;
+    z-index: 9999999;
+    position: relative;
+    overflow: hidden;
 }
-.navigation .hidden {
+.on-load-container {    
+    display: grid;
+    place-items: center;
+}
+.on-load-container img {
+    width: 10%;
+    animation: rotate 2s linear forwards infinite;
+}
+.on-load-container h1 {
+    color: var(--text-color-black-900);
+    font-weight: 900;
+    font-size: 50px;
+    text-align: center;
+    text-transform: capitalize;
+    font-family: 'Gabriela', sans-serif;
+    margin-top: 20px;   
+}
+
+.on-load-none {
+    display:  none;
+}
+.navigation {
+    transform: translateY(30px);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999999;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .7s;
+}
+ .nav-hidden {
     transform: translateY(-100%);
 }
 header {
@@ -33,8 +66,7 @@ header {
     justify-content: center;
     width: 95%;
     padding: 5px 20px;
-    border-bottom: 2px solid blue;
-    
+    border-bottom: 2px solid blue;   
 }
 nav {
     display: flex;
@@ -45,21 +77,31 @@ nav {
     width: 100%;
 }
 .logo img {
-    width: 40px;
+    width: 40px !important;
+}
+.nav-links li{
+    padding: 20px 40px;
+    color: white;
+    text-align: left;
+    width: 100%;
+    
+}
+.nav-links a{
+    color: white;
+    z-index: 100000;
+    text-align: center;
 }
 .nav-links {
     height: auto;    
 }
 nav .nav-links ul{
     display: flex;
-    gap: 20px;
-    padding-right: 50px;
+    gap: 25px;    
     align-items: center;
 }
 nav .nav-links ul li {
     list-style: none; 
-    width: 150px;   
-    
+    width: auto;
     text-align: center;
 }
 nav .nav-links ul li a::after {
@@ -90,6 +132,7 @@ nav .nav-links ul li ion-icon {
 nav .nav-links ul .link-dropdown {
     position: relative;
     text-align: center;
+    width: auto;   
 }
 nav .nav-links ul .dropdown  li {
     text-align: left !important;
@@ -101,10 +144,8 @@ nav .nav-links ul .dropdown  li {
     transition:  0.2s;
     color: #111 !important;
 }
-nav .nav-links ul .dropdown  li {
-    font-family: 'Poppins', sans-serif;
+nav .nav-links ul .dropdown  li a {
     font-size: 14px;        
-    color: #111 !important;
 }
 nav .nav-links ul .dropdown  a::after {
     position: relative;
@@ -120,7 +161,7 @@ nav .nav-links ul .dropdown li:hover > a {
 nav .nav-links ul .link-dropdown .dropdown {
     width: 300px;
     padding: 10px;
-    top: 50px;
+    top: 70px;
     left: 0px;
     position: absolute;
     background-color: #f7f6f6;
@@ -128,37 +169,104 @@ nav .nav-links ul .link-dropdown .dropdown {
     border-radius: 10px;
     display: none;
 }
+
 .nav-open {
     display: block !important;
 }
-@media screen and (max-width: 768px) {
+.darkmode dark-btn {
+    background-color: rgba(0,0,0,0.1);
+    font-size: 20px;
+    padding: 3px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    margin-right: 7px;
+    transition: 0.5s;
+    z-index: 100;
     
+}
+.fa-solid {
+    color: #111;
+}
+.darkmode dark-btn:hover {
+    animation: rotate 2s linear forwards infinite;
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.navbar {
+    display: none;
+    z-index: 1000000;
+}
+.navmenu {    
+    padding: 3px;
+    width: 45px;
+    height: 45px;
+    background: rgb(187, 188, 189);
+    text-align: center;
+    display: none;    
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    cursor: pointer;
+    z-index: 3;
+    margin-right: 10px;
+}
+.navmenu i {
+    color: #23242a;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.fliter {
+    filter: blur(5px);
+}
+@media screen and (max-width: 768px) {
+    .on-load-container img {
+        width: 23%;
+    }
+    .on-load-container h1 {
+        font-size: 35px;
+    }
     nav .nav-links ul{
         display: block;
-        padding-left: 0px;
-        padding-top: 100px;
-        padding-right: 0;
+        padding-bottom: 20px;
+        padding-top: 30px;
+        padding-right: 0px;
     }
-    .fliter {
-        filter: blur(20px);
-    }
+    
     nav .nav-links {
-        background-color: #777;
+        background-color: #f1f1f1;
         width: 100%;        
         position: absolute;
         height: 0;        
         transition: 1s;        
-        overflow: scroll;
+        overflow: hidden;
         align-items: flex-start;
-        right: -11%;
-        top: -31px;
+        right: 0;
+        top: 10vh;
+        border-radius: 20px;
     }
     nav .nav-links ul li {        
         width: 100%;           
         text-align: left;
+        transition: .5s;
+        border-bottom: 1px solid #b8b8b8;
     }
+    nav .nav-links ul li:hover > a {
+        color: #807d7d !important;
+    }
+    
     nav .nav-links ul li a {
-        color: #fff;        
+        color: #111;        
         font-size: 16px;
     }
     nav .nav-links ul li ion-icon {
@@ -173,22 +281,34 @@ nav .nav-links ul .link-dropdown .dropdown {
     }
     nav .nav-links ul .dropdown li {
         padding-left: 30px;
-        font-size: 16px;    
+        font-size: 16px !important;    
         margin-top: 20px;
         width: 100%;
-        color: #fff !important;
+        color: #111 !important;
     }
     
     nav .nav-links ul .link-dropdown .dropdown {
         width: 100%;
         top: 0px;
         left: 0px;
-        
-        background-color: #777;
+        background-color: #f1f1f1;
         
     }
     nav .nav-links ul .link-dropdown .dropdown {
         position: relative;
     }
-    
+    nav .nav-links ul .dropdown  li {
+        font-size: 14px !important;    
+    }
+    nav .nav-links ul .dropdown  li a{
+        color: #111 !important;
+        font-size: 14px !important;    
+    }
+    .navmenu {
+        display: flex;
+    }
+    .navbar {
+        display: block;
+    }
+       
 }
