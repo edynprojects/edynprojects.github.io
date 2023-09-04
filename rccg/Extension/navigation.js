@@ -4,6 +4,7 @@ const navLinks = document.querySelector(".nav-links");
 const navLink = document.querySelector(".nav-link");
 let totalHeight = 0
 navMenu.addEventListener("click", ()=> {
+    navMenu.classList.toggle("nav-is-active")
     const linkContainer = navLinks.getBoundingClientRect().height
     const navLinkHeight = navLink.getBoundingClientRect().height
     // console.log(linkContainer, navLinkHeight)
@@ -25,6 +26,23 @@ navMenu.addEventListener("click", ()=> {
     
 })
 
+
+// TOP NAVIGATOR
+const navigatorTop = document.querySelector(".topnavigator")
+window.addEventListener("scroll", function() {
+  if(this.window.scrollY > 900) {
+    navigatorTop.classList.add("topnavigator-visible")
+  }
+  else {
+    navigatorTop.classList.remove("topnavigator-visible")
+    }
+})
+navigatorTop.addEventListener("click", function() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    })
+})
 
 
 // NAVIGATION                            
