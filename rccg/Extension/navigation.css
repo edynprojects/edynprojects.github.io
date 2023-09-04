@@ -8,10 +8,10 @@ section {
     width: 100%;
 }
 .on-load  {
-    display: fixed !important;
+    
+    display: flex;
     background: #fff;
     height: 100vh;
-    display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -23,10 +23,6 @@ section {
     display: grid;
     place-items: center;
 }
-.on-load-container img {
-    width: 10%;
-    animation: rotate 2s linear forwards infinite;
-}
 .on-load-container h1 {
     color: var(--text-color-black-900);
     font-weight: 900;
@@ -36,6 +32,11 @@ section {
     font-family: 'Gabriela', sans-serif;
     margin-top: 20px;   
 }
+.on-load-container img {
+    width: 10%;
+    animation: rotate 2s linear forwards infinite;
+}
+
 
 .on-load-none {
     display:  none;
@@ -285,10 +286,11 @@ nav .nav-links ul .link-dropdown .dropdown {
     }
     nav .nav-links ul{
         display: block;
-        padding-bottom: 20px;
+        /* padding-bottom: 20px;
         padding-top: 30px;
-        padding-right: 0px;
-        padding: 10px;
+        padding-right: 0px;*/
+        padding: 10px; 
+        width: 100%;
     }
     
     nav .nav-links {
@@ -297,7 +299,7 @@ nav .nav-links ul .link-dropdown .dropdown {
         position: absolute;
         height: 0;        
         transition: 1s;        
-        /* overflow: hidden; */
+        overflow: hidden;
         align-items: flex-start;
         right: 0;
         top: 10vh;
