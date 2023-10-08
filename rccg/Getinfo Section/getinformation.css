@@ -158,6 +158,9 @@ form {
     display: flex;
     gap: 20px;
 }
+.inputcheckbox input {
+    padding-right: 10px;
+}
 .btn-container {
     display: flex;
     padding: 4px 10px;
@@ -179,6 +182,7 @@ form {
     align-items: center;
     gap: 5px;
 }
+
 .transparent {
     background: transparent;
 }

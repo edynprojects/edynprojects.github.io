@@ -30,6 +30,9 @@ body {
     background-color: var(--bg-blackk);
     
 }
+body.disable-scrolling {
+    overflow: hidden;
+}
 body.darkmode {
     --skin-color: #2727b8;
     --skin-colo-2: red;
