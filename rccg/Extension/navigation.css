@@ -53,6 +53,10 @@ section {
     justify-content: center;
     transition: .7s;
 }
+.navigation-open {
+    transform: scale(1) !important;
+    transform-origin:top;
+}
  .nav-hidden {
     transform: translateY(-100%);
 }
@@ -107,6 +111,7 @@ nav .nav-links ul{
 nav .nav-links ul li {
     list-style: none; 
     width: auto;
+    
     text-align: center;
 }
 nav .nav-links ul li a::after {
@@ -213,7 +218,7 @@ nav .nav-links ul .link-dropdown .dropdown {
 }
 .topnavigator .top{
     
-    background-color: rgb(5, 251, 255);
+    background-color: rgb(5, 18, 255);
     font-size: 20px;
     padding: 3px;
     width: 45px;
@@ -275,7 +280,7 @@ nav .nav-links ul .link-dropdown .dropdown {
 }
 
 .fliter {
-    filter: blur(5px);
+    filter: opacity(0.1);
 }
 @media screen and (max-width: 768px) {
     .on-load-container img {
@@ -286,79 +291,97 @@ nav .nav-links ul .link-dropdown .dropdown {
     }
     nav .nav-links ul{
         display: block;
-        /* padding-bottom: 20px;
-        padding-top: 30px;
-        padding-right: 0px;*/
+        overflow-y: visible;
         padding: 10px; 
         width: 100%;
     }
     
-    nav .nav-links {
+     nav .nav-links {
         background-color: #f1f1f1;
         width: 100%;        
         position: absolute;
-        height: 0;        
-        transition: 1s;        
-        overflow: hidden;
-        align-items: flex-start;
-        right: 0;
+        height: auto;
+        transition: 1s;                
         top: 10vh;
         border-radius: 20px;
-        margin-right: 0px !important;
+        transform: scale(0);
+        overflow-x: none;
+        overflow-y: visible;
+        padding: 20px;
         
     }
-    nav .nav-links ul li {        
-        width: 100%;           
+    .nav-links li{
+        padding: 0px;
+        color: white;
         text-align: left;
-        transition: .5s;
-        border-bottom: 1px solid #b8b8b8;
+        width: 100%;
+        
     }
-    nav .nav-links ul li:hover > a {
-        color: #807d7d !important;
+    .nav-links a{
+        color: white;
+        z-index: 100000;
+        text-align: left;
+    }
+    .nav-links {
+        height: auto;            
+        margin-right: 0px !important;
     }
     
     nav .nav-links ul li a {
-        color: #111;        
+        
         font-size: 16px;
     }
-    nav .nav-links ul li ion-icon {
-        float: right;
+    nav .nav-links ul li a:hover::after {
+        width: 0%;
     }
+    nav .nav-links ul li ion-icon {
+        font-size: 14px;
+        color: #555;
+    }
+    
     nav .nav-links ul .link-dropdown {
         position: relative;
         
-        /* margin: 10px 0;
-         */
-        
-    }
-    nav .nav-links ul .dropdown li {
-        padding-left: 30px;
-        font-size: 16px !important;    
-        margin-top: 20px;
-        width: 100%;
-        color: #111 !important;
     }
     
+    nav .nav-links ul .dropdown  li, nav .nav-links ul li {
+        text-align: left !important;
+        padding: 6px 10px;
+        font-size: 16px;        
+        border-bottom: 1px solid #b8b8b8;
+        margin-top: 10px;
+        width: 100%;
+        transition:  0.2s;
+        color: #111 !important;
+    }
+    nav .nav-links ul .dropdown  li a {
+        font-size: 16px;        
+    }
+    nav .nav-links ul .dropdown  a::after {
+        position: relative;
+    }
+    nav .nav-links ul .dropdown li:hover, nav .nav-links ul li:hover  {
+        color: #fff  !important;
+        background-color: #30449fdf;
+        border-radius: 8px;
+    }
+    .nav-links ul li:hover  a {
+        color: #fff  !important;
+    }
+    nav .nav-links ul .dropdown li:hover > a {
+        color: #fff ;
+    }
     nav .nav-links ul .link-dropdown .dropdown {
         width: 100%;
         top: 0px;
         left: 0px;
-        background-color: #f1f1f1;
-        
-    }
-    nav .nav-links ul .link-dropdown .dropdown {
         position: relative;
-    }
-    nav .nav-links ul .dropdown  li {
-        font-size: 14px !important;    
-    }
-    nav .nav-links ul .dropdown  li a{
+        background-color: transparent;
+        padding: 0px;    
+        border-radius: 0px;
         
-        font-size: 14px !important;    
     }
-    nav .nav-links ul .dropdown  li:hover > a {
-        color: #fff !important;
-    }
+    
     .navmenu {
         display: flex;
     }

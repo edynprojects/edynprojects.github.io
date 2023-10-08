@@ -460,6 +460,7 @@ button {
     margin: 10px;    
     padding: 10px;
 }
+
 .title h2 {
     color: var(--text-color-black-700);
     font-weight: 700;
@@ -468,7 +469,7 @@ button {
     margin-bottom: 20px;   
 }
 
-.title h3, .title-2 h3{
+.title h3 {
     color: var(--text-color-black-700);
     font-weight: 400;
     font-size: 19px;
@@ -786,7 +787,7 @@ p {
 }
 .cs .cs-row .dow {
     height: 250px;
-    width: 500px;
+    width: 520px;
     background-color: #17a9b7;
     transform: translateX(100px);
     display: flex;

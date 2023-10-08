@@ -1,0 +1,28 @@
+const dropdown = document.querySelectorAll(".dropdown");
+const information = document.querySelectorAll(".information");
+let isToggled = false;
+
+dropdown.forEach((item, index) => {
+  item.addEventListener("click", () => {
+    renderDropdown(item, index);
+  });
+});
+
+function getInformationHeight(infoElement) {
+  const height = infoElement.clientHeight;
+  return height;
+}
+
+function renderDropdown(item, index) {
+  isToggled = !isToggled;
+  const infoElement = information[index];
+
+  if (isToggled) {
+    const itemHeight = getInformationHeight(infoElement) + item.clientHeight;
+    item.style.height = `${itemHeight}px`;
+  } else {
+    item.style.height = "auto"; // Reset the height to auto to close the dropdown
+  }
+}
+// Toggle the dropdown state
+dropdownStates[index] = !dropdownStates[index];
