@@ -1,0 +1,57 @@
+            <header class="header">
+                <div class="navigation">
+                    <div class="logo">
+                        <img src="/img/IMG_1807.PNG" alt="logo">
+                    </div>
+                                <div class="nav">
+                                    <!-- <div class="title2 ">
+                                        <img src="./img/IMG_1807.PNG" alt="logo" >
+                                        <h3 class="none">The Redeemed <br> Christain Church Of God city of triumph</h3>            
+                                    </div>                                     -->
+                                    <div class="nav-links">
+                                        <ul class="nv-links">
+                                            <li class="link">
+                                                <a href="#">Home<ion-icon name="home-outline"></ion-icon>
+                                                </a>
+                                            </li>
+                                            <li class="link"><a href="#blog" class="scroll-link">Blog<ion-icon name="earth-outline"></ion-icon></a></li>
+                                            <li class="link"><a href="#contact" class="scroll-link"> Contact<ion-icon name="chatbubbles-outline"></ion-icon></a></li>
+                                            <div class="link-dropdown">
+                                                <li class="link">
+                                                    <a href="#" class="scroll-link dropdown-item" data-target="dropdown1"> Resources<ion-icon name="newspaper-outline"></ion-icon>
+                                                    
+                                                </a> <i class="fa-solid fa-angle-down fa-fade"></i>                                                  
+                                                    </li>
+                                                    <div class="dropdown-items nav-none" data-id="dropdown1">
+                                                            <li class="dropdown-nav-link"><a href="#" ><ion-icon name="person-outline"></ion-icon>New Here</a></li>
+                                                            <li class="dropdown-nav-link"><a href="#"><ion-icon name="chatbubble-ellipses-outline"></ion-icon>Ask a Question?</a></li>
+                                                            <li class="dropdown-nav-link"><a href="#"><ion-icon name="mail-outline"></ion-icon>Newsletters</a></li>
+                                                            <li class="dropdown-nav-link"><a href="#"><ion-icon name="reader-outline"></ion-icon>Organize</a></li>
+                                                    </div>
+                                            </div>
+                                            <div class="link-dropdown">
+                                                <li class="link">
+                                                    <a href="#" class="scroll-link dropdown-item" data-target="dropdown1"> About<ion-icon name="newspaper-outline"></ion-icon>
+                                                    
+                                                </a> <i class="fa-solid fa-angle-down fa-fade"></i>                                                  
+                                                    </li>
+                                                    <div class="dropdown-items nav-none" data-id="dropdown1">
+                                                            <li class="dropdown-nav-link"><a href="#" ><ion-icon name="person-outline"></ion-icon>New Here</a></li>
+                                                            <li class="dropdown-nav-link"><a href="#"><ion-icon name="chatbubble-ellipses-outline"></ion-icon>Ask a Question?</a></li>
+                                                            <li class="dropdown-nav-link"><a href="#"><ion-icon name="mail-outline"></ion-icon>Newsletters</a></li>
+                                                            <li class="dropdown-nav-link"><a href="#"><ion-icon name="reader-outline"></ion-icon>Organize</a></li>
+                                                    </div>
+                                            </div>
+                                        </ul>                                                                                               
+                                    </div>                                                                    
+                                </div>                        
+                </div>                
+                <div class="darkmode ">
+                    <dark-btn class="dark"><i class="fa-solid fa-moon"></i></dark-btn>
+                </div>
+                <div class="navbar">
+                            <div class="navmenu">
+                                <i class='bx bx-menu-alt-right menu'></i>
+                            </div>
+                        </div>
+            </header>

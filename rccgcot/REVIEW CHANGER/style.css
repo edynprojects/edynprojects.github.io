@@ -1,0 +1,89 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-family: poppins;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+.review {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #20d4d4;
+    padding: 50px;
+}
+main {
+    background-color: #fff;
+    padding: 20px;
+    display: grid;
+    place-items: center;
+}
+.title {
+    text-align: center;
+    padding: 10px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 20px;
+}
+.title h1 {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+.job {
+    color: #20d4d4;
+    font-size: 20px;
+    font-family: gabriela;
+}
+.info-con {
+    font-size: 14px;
+    padding: 10px;
+    width: 600px;
+}
+
+.underline {
+    width: 100px;
+    height: 3px;
+    border-radius: 10px;
+    background:  #20d4d4;   
+    text-align: center; 
+    
+}
+.img-overlay {
+    width: 100%;
+    height: 100%;
+    background:  #20d4d4;
+    right: -10px;
+    top:  0px;
+    position: absolute;
+    border-radius: 50%; 
+    
+}
+.imgcon {
+    position: relative;
+}
+.imgcon img {
+    width: 250px;
+    height: 220px;
+    border-radius: 50%;
+    position: relative;   
+    z-index: 10;
+}
+.btn-con {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+button {
+    margin: 10px;
+    width: 200px;
+}
+.content {
+    text-align: center;
+}

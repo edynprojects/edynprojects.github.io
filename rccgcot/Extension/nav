@@ -1,0 +1,31 @@
+function closeMobileNavigation() {
+  headerDefault()  
+  navMenu.classList.remove("nav-is-active");
+  hr.classList.add("hr-hidden");
+}
+
+function headerDefault() {
+    const LinkDropdown = document.querySelectorAll(".link-dropdown");
+  LinkDropdown.forEach((otherlink) => {
+    const otherDropdown = otherlink.querySelector(".dropdown");
+    if (        
+      otherDropdown.classList.contains("nav-open")
+    ) {
+      otherDropdown.classList.remove("nav-open");        
+    }
+  });
+
+  if(header.classList.contains("header-active-static")) {
+    header.classList.remove("header-active-static");
+  } 
+
+  mobileNav.classList.remove("mobile-nav-open");
+ mobileNav.classList.remove("header-active");
+}
+
+function toggleNavigation() {
+  navMenu.addEventListener("click", () => {
+    navMenu.classList.toggle("nav-is-active");
+    headerDefault()
+  });
+

@@ -1,0 +1,201 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+:root {
+    --skin-color: #2727b8;
+    --skin-colo-2: red;
+    --bg-grey: #fff;
+    --text-color-black-900: #111;
+    --text-color-white-900: #fff;
+    --text-color-white-700: #f2f2f2e1;
+    --text-color-black-700: #4d5052;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color:var(--text-color-black-900);
+}
+button {
+    padding: 10px 20px;    
+    outline: 0;
+    border: 0;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    margin-top: 10px;
+    transition: all 2s;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.get-info {
+    background: #009688;
+    height: 100vh;
+    width: 100%;
+}
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+form {
+       background-color: white;
+       height: 550px;
+       width: 650px;
+       border-radius: 15px;
+       padding: 20px;
+       display: grid;
+}
+.get-info-title {
+    margin: 3px 0;
+    padding: 6px;
+    
+}
+.get-info-title h2 {
+    color: var(--text-color-black-700);
+    font-weight: 700;
+    font-size: 22px;
+    text-transform: uppercase;    
+    font-family: 'Gabriela', sans-serif;
+    padding: 3px 10px;
+    transition: 1s;
+    width: 100%;
+}
+.get-info-title-welcome {
+    text-align: center;
+    width: 100%;
+}
+.get-info-title-welcome svg {
+    font-size: 30px;
+    
+}
+.get-info-title-welcome h3 {
+    color: #009688;
+    font-weight: 500;
+    
+    font-size: 19px;
+    text-transform: uppercase;   
+    font-family: gabriela;
+}
+.trueValidity{
+    color: green;
+}
+.falseValidity{
+    color: red;
+}
+.inputs-con {
+    display: grid;
+       place-items: center;
+       width: 100%;
+       height: 100%;
+       /* background-color: red; */
+       padding: 10px 20px;
+}
+.inputbox {
+    position: relative;
+    margin-top: 10px;
+    width: 100%;
+
+}
+.inputbox label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px 10px 10px;
+    font-size: 1em;
+    pointer-events: none;
+}
+.inputbox input {
+    position: relative;
+    width: 100%;
+    padding: 30px 10px 20px;
+    background: transparent;
+    border: none;
+    outline: none;
+    z-index: 10;
+    font-size: 1.2em;
+    text-transform: capitalize;
+    color: white;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+.inputbox i { 
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #6b6e6b;
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    margin-bottom: 10px;
+}
+.inputbox input:valid ~ label, 
+.inputbox input:focus ~ label {
+    color: #747c76;
+    transform: translateY(-30px);
+}
+.inputbox input:valid ~ i, 
+.inputbox input:focus ~ i {
+    height: 44px;
+    background: #747c76;
+}
+.inputcheckbox {
+    margin: 15px 0; 
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+.inputcheckbox input {
+    padding-right: 10px;
+}
+.btn-container {
+    display: flex;
+    padding: 4px 10px;
+    justify-content: center;
+    flex-direction: column;
+}
+.btn-container button:nth-child(1)  {
+    background-color: #009688;
+    color: #fff;
+}
+.btn-container button:nth-child(1) a{
+    color: white;
+}
+.btn-container button:nth-child(2)  {                        
+    
+    background: rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.btn-container button:nth-child(2) svg{
+    font-size: 25px;
+}
+
+/* .transparent {
+    background: transparent;
+} */
+@media screen and (max-width: 768px){
+    form {
+        height: 85vh;
+        padding-left: 15px;
+    }
+}
