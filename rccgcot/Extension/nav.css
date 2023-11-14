@@ -17,46 +17,54 @@
     border-radius: 10px;
 }
 
- ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     transition: 0.7s;
 }
+
 ::-webkit-scrollbar-track:hover {
     border-radius: 10px;
     background-color: #cacaca;
 }
+
 section {
     height: 100vh;
     width: 100%;
 }
+
 a {
-cursor: pointer;
+    cursor: pointer;
 }
+
 .logo img {
     width: 40px !important;
 }
+
 /* section {
     height: 100vh;
     width: 100%;
 } */
 header {
-    z-index: 99999999999;    
+    z-index: 99999999999;
     position: fixed;
-    
+
     display: block;
     width: 100%;
-    
+
 }
 
 .preloader {
     position: relative;
-    display: none;
+    display: block;
+    background: white;
+    height: 100vh;
 }
-.on-load-container {    
-    display: none;
+
+.on-load-container {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: red;
+    background: #fff;
     height: 100vh;
     width: 100%;
     z-index: 9999999;
@@ -64,15 +72,32 @@ header {
     top: 0;
     left: 0;
 }
+
 .on-load-container h1 {
-    color: var(--text-color-black-900);
+    color: #23242a;
     font-weight: 900;
     font-size: 50px;
     text-align: center;
-    text-transform: capitalize;
+    text-transform: uppercase;
+    letter-spacing: 3px;
     font-family: 'Gabriela', sans-serif;
-    margin-top: 20px;   
+    margin-top: 20px;
+    position: relative;
 }
+
+.on-load-container h1::after {
+    content: ' ';
+    position: absolute;
+    height: 7px;
+    width: 25%;
+    text-align: center;
+    left: 50%;
+    top: 125%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    background-color: #23242a;
+}
+
 .on-load-container img {
     width: 10%;
     animation: rotate 2s linear forwards infinite;
@@ -80,20 +105,20 @@ header {
 
 
 .on-load-none {
-    display:  none;
+    display: none;
 }
 
-.header-container { 
-    z-index: 9999999;    
+.header-container {
+    z-index: 9999999;
     background-color: white;
     padding: 5px 20px;
-    border-radius: 20px;  
-      margin: 20px auto;
-     border: 1px solid #dcdbdb;   
-     border-bottom: 0px;
-   height: 10vh;
+    border-radius: 20px;
+    margin: 20px auto;
+    border: 1px solid #dcdbdb;
+    border-bottom: 0px;
+    height: 10vh;
     width: 95%;
-    border-bottom: 2px solid blue;   
+    border-bottom: 2px solid blue;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -109,22 +134,28 @@ header {
 nav {
     margin-right: 100px;
 }
+
 /* nav } */
 
-nav .nav-links ul, nav .nav-links-mobile ul {
+nav .nav-links ul,
+nav .nav-links-mobile ul {
     display: flex;
-    gap: 80px;    
+    gap: 80px;
     align-items: center;
 
-    
+
 }
-nav .nav-links ul li, nav .nav-links-mobile ul li {
-    list-style: none; 
+
+nav .nav-links ul li,
+nav .nav-links-mobile ul li {
+    list-style: none;
     width: auto;
     padding: 0px 0px;
     text-align: center;
 }
-nav .nav-links ul li a, nav .nav-links-mobile ul li a{
+
+nav .nav-links ul li a,
+nav .nav-links-mobile ul li a {
     position: relative;
     text-decoration: none;
     color: #111;
@@ -136,10 +167,11 @@ nav .nav-links ul li a, nav .nav-links-mobile ul li a{
     display: none;
     z-index: 1000000;
 }
-.navmenu {    
+
+.navmenu {
     padding: 3px;
     width: 35px;
-    
+
     background: transparent;
     border-radius: 3px;
     cursor: pointer;
@@ -148,8 +180,10 @@ nav .nav-links ul li a, nav .nav-links-mobile ul li a{
     margin: 0px 10px;
     position: relative;
 }
-.navmenu .bar , .navmenu .bar::after {
-    content:  ' ';
+
+.navmenu .bar,
+.navmenu .bar::after {
+    content: ' ';
     background-color: blue;
     display: block;
     margin: 6px 0;
@@ -158,43 +192,51 @@ nav .nav-links ul li a, nav .nav-links-mobile ul li a{
     border-radius: 7px;
     transition: 0.4s;
 }
- .nav-is-active  .bar  {
+
+.nav-is-active .bar {
     transform: rotate(-45deg);
 }
-.nav-is-active  .bar::after {
+
+.nav-is-active .bar::after {
     transform: rotate(80deg) translateX(-3px);
 }
 
 nav .nav-links ul .link-dropdown {
     position: relative;
     text-align: center;
-    width: auto;   
+    width: auto;
 }
-nav .nav-links ul .dropdown  li {
+
+nav .nav-links ul .dropdown li {
     text-align: left !important;
     padding: 6px 10px;
-    font-size: 12px;        
+    font-size: 12px;
     border-bottom: 1px solid #f2f2f2;
     margin-top: 5px;
     width: 100%;
-    transition:  0.2s;
+    transition: 0.2s;
     color: #fff !important;
     font-family: 'Poppins', sans-serif;
 }
-nav .nav-links ul .dropdown  li a {
-    font-size: 12px;     
-    color: #fff !important; 
+
+nav .nav-links ul .dropdown li a {
+    font-size: 12px;
+    color: #fff !important;
 }
-nav .nav-links ul .dropdown  a::after {
+
+nav .nav-links ul .dropdown a::after {
     position: relative;
 }
-nav .nav-links ul .dropdown li:hover  {
-    color: #fff  !important;
+
+nav .nav-links ul .dropdown li:hover {
+    color: #fff !important;
     background-color: rgba(149, 149, 233, 0.993);
 }
-nav .nav-links ul .dropdown li:hover > a {
-    color: #fff ;
+
+nav .nav-links ul .dropdown li:hover>a {
+    color: #fff;
 }
+
 nav .nav-links ul .link-dropdown .dropdown {
     width: 250px;
     padding: 10px;
@@ -202,18 +244,20 @@ nav .nav-links ul .link-dropdown .dropdown {
     left: -20px;
     position: absolute;
     background-color: rgb(108, 108, 230);
-    padding: 15px;    
+    padding: 15px;
     border-radius: 10px;
     display: none;
 }
+
 .nav-open {
     display: block !important;
-    
+
 }
 
- .nav-hidden {
+.nav-hidden {
     transform: translateY(-200%);
 }
+
 .hr-hidden {
     display: none;
 }
@@ -229,11 +273,11 @@ nav:nth-child(2) {
 
 .account svg {
     fill: #777;
-    background-color: rgba(0,0,0,0.1);
+    background-color: rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     padding: 5px;
     transition: 0.9s;
-    font-size:35px;
+    font-size: 35px;
     transform: translateY(3px);
 }
 
@@ -244,13 +288,13 @@ nav:nth-child(2) {
 .account-option {
     position: absolute;
     margin-top: 20px;
-    left:-120px;
+    left: -120px;
     background: linear-gradient(45deg, rgb(113, 113, 187), rgb(107, 107, 230));
     width: 150px;
     color: #fff;
     padding: 10px;
     border-radius: 10px;
-    box-shadow: 2px 2px rgba(0,0,0,0.1);
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.1);
     transition: 0.6s;
     opacity: 0;
     pointer-events: none;
@@ -268,8 +312,9 @@ nav:nth-child(2) {
     width: 10px;
     height: 10px;
     background-color: white;
-    
+
 }
+
 .account-option::after {
     content: ' ';
     position: absolute;
@@ -290,7 +335,7 @@ nav:nth-child(2) {
     font-size: 14px;
     font-weight: 600;
     /* background-color: white; */
-    
+
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 
@@ -355,7 +400,7 @@ nav:nth-child(2) {
     position: absolute;
     content: '';
     height: 3px;
-    background-color:rgb(60, 60, 240);
+    background-color: rgb(60, 60, 240);
     border-radius: 20px;
     border: 0;
     width: 20%;
@@ -364,7 +409,8 @@ nav:nth-child(2) {
     transform: translate(-50%, -50%);
 }
 
-form button, form input {
+form button,
+form input {
     outline: none;
     transition: 0.8s;
     border-radius: 20px;
@@ -374,14 +420,15 @@ form button, form input {
 form input {
     border: 1px solid #cacaca;
     text-indent: 10px;
-    padding: 10px;        
+    padding: 10px;
 }
 
-form input:focus, form input:active {
+form input:focus,
+form input:active {
     border-color: rgb(60, 60, 240);
 }
 
-.field-names  {
+.field-names {
     margin: 10px 0;
 }
 
@@ -389,22 +436,25 @@ form input:focus, form input:active {
     text-transform: capitalize;
 }
 
-.field-email, .field-password {
+.field-email,
+.field-password {
     width: 100%;
     margin: 5px;
     position: relative;
 }
 
-.field-email svg, .field-password  svg {
+.field-email svg,
+.field-password svg {
     right: 20px;
     top: 50%;
-    transform: translate(-50%, -50%);    
+    transform: translate(-50%, -50%);
     position: absolute;
 }
 
-.field-email input, .field-password input {
+.field-email input,
+.field-password input {
     width: 100%;
-    
+
 }
 
 .field-checkbox {
@@ -413,8 +463,8 @@ form input:focus, form input:active {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    
-    
+
+
 }
 
 .field-checkbox input {
@@ -442,12 +492,12 @@ form a:hover {
 
 form .line {
     position: relative;
-    
+
     height: 1px;
     width: 100%;
     background-color: #cacaca;
     margin: 20px 0;
-    
+
 }
 
 form .line::before {
@@ -469,10 +519,11 @@ form .line::before {
     margin: 10px 0;
 }
 
-#createAccount, #loginaccount {
-    background:linear-gradient(45deg,rgb(60, 60, 240), rgb(110, 161, 209));
-     color: white;
-     position: relative;
+#createAccount,
+#loginaccount {
+    background: linear-gradient(45deg, rgb(60, 60, 240), rgb(110, 161, 209));
+    color: white;
+    position: relative;
 }
 
 .field-button-container button:nth-child(1)::before {
@@ -520,44 +571,53 @@ form .line::before {
     pointer-events: all;
     display: block;
 }
+
 /*  END OF ACCOUNT CODE */
 @media screen and (max-width: 850px) {
 
+    .on-load-container img {
+        width: 20%;
+    }
+
+    .on-load-container h1 {
+        font-size: 40px;
+    }
+
     header {
         height: auto;
-        transition: 0.8s;    
-         padding: 5px 6px;
-         border-radius: 20px;
-          border: 1px solid #dcdbdb;   
-          border-bottom: 0px;
-         width: 95%;
-         margin: 30px 2.5%;
-         border-bottom: 2px solid blue;   
-         background-color: white;
+        transition: 0.8s;
+        padding: 5px 6px;
+        border-radius: 20px;
+        border: 1px solid #dcdbdb;
+        border-bottom: 0px;
+        width: 95%;
+        margin: 30px 2.5%;
+        border-bottom: 2px solid blue;
+        background-color: white;
     }
 
     .header-active {
-        overflow-y: scroll;   
+        overflow-y: scroll;
         display: block;
-        height: 50vh;
+        height: 45vh;
         width: 100%;
     }
-    
+
     .header-active-static .header-container {
         padding: 10px 20px;
         width: 100%;
-        box-shadow: 2px 2px rgba(0,0,0,0.1), -2px 0px rgba(0,0,0,0.1);
+        box-shadow: 2px 2px rgba(0, 0, 0, 0.1), -2px 0px rgba(0, 0, 0, 0.1);
     }
-    
+
     .header-active-static {
         width: 100%;
         border-radius: 0;
         margin: 0;
         height: 100vh;
-        
+
     }
 
-    .header-active-static .header-active  {
+    .header-active-static .header-active {
         height: 80vh !important;
     }
 
@@ -569,11 +629,11 @@ form .line::before {
         padding: 5px 20px;
         margin: 0;
         border-radius: 0px;
-         border: 0;   
-         border-bottom: 0px;
+        border: 0;
+        border-bottom: 0px;
         width: 95%;
-        border-bottom: 0;   
-        
+        border-bottom: 0;
+
     }
 
     .forms {
@@ -585,13 +645,13 @@ form .line::before {
         /* background-color: red; */
         width: 80%;
     }
-    
+
     nav:nth-child(1) {
         display: none;
     }
 
     nav {
-        background-color: rgba(0,0,0,0.1);
+        background-color: rgba(0, 0, 0, 0.1);
         border-radius: 20px;
         padding: 20px;
         margin-bottom: 20px;
@@ -609,18 +669,18 @@ form .line::before {
     nav .nav-links-mobile ul li {
         text-align: left !important;
         padding: 6px 20px;
-        font-size: 16px;        
+        font-size: 16px;
         background: rgb(108, 108, 230);
         border-radius: 20px;
 
         margin-top: 10px;
         width: 100%;
-        transition:  0.2s;
+        transition: 0.2s;
 
     }
-    
+
     nav .nav-links-mobile ul li a {
-                color: #fff !important;
+        color: #fff !important;
     }
 
     .sidenavigation {
@@ -628,18 +688,18 @@ form .line::before {
 
     }
 
-    nav .nav-links-mobile ul .dropdown  li {
+    nav .nav-links-mobile ul .dropdown li {
         text-align: left !important;
-        padding: 6px 20px;   
-        font-size: 16px;        
+        padding: 6px 20px;
+        font-size: 16px;
         border-bottom: 1px solid #b8b8b8;
         margin-top: 5px;
         width: 100%;
-        transition:  0.2s;
+        transition: 0.2s;
         color: #fff !important;
         font-family: 'Poppins', sans-serif;
-    }    
-    
+    }
+
     nav .nav-links-mobile ul .link-dropdown .dropdown {
         width: 100%;
         padding: 0px;
@@ -651,31 +711,35 @@ form .line::before {
         display: none;
     }
 
-    nav .nav-links-mobile ul .dropdown  li a {
-        font-size: 16px;     
+    nav .nav-links-mobile ul .dropdown li a {
+        font-size: 16px;
 
-        color: #fff !important; 
+        color: #fff !important;
     }
-    nav .nav-links-mobile ul .dropdown  a::after {
+
+    nav .nav-links-mobile ul .dropdown a::after {
         position: relative;
     }
-    nav .nav-links-mobile ul .dropdown li:hover  {
-        color: #fff  !important;
+
+    nav .nav-links-mobile ul .dropdown li:hover {
+        color: #fff !important;
         background-color: #999;
         border-radius: 20px;
     }
-    nav .nav-links-mobile ul .dropdown li:hover > a {
-        color: #fff ;
+
+    nav .nav-links-mobile ul .dropdown li:hover>a {
+        color: #fff;
     }
 
 
     .navmenu {
         display: flex;
     }
+
     .navbar {
         display: block;
     }
-    
+
 
     hr {
         margin: 10px 0px 30px 0;
@@ -685,24 +749,48 @@ form .line::before {
 }
 
 
- @media screen and (max-width: 375px) {
-    .field-names  {
+@media screen and (max-width: 375px) {
+    .on-load-container img {
+        width: 25%;
+    }
+
+    .on-load-container h1 {
+        font-size: 30px;
+    }
+
+    .forms {
+
+        padding: 20px 0px;
+    }
+
+    header {
+        margin: 20px 2.5%;
+    }
+
+    .field-names {
         margin: 5px;
         width: 100%;
     }
-    
+
     .field-names input {
         text-transform: capitalize;
         width: 100%;
         margin: 3px 0px;
     }
-    
-    .field-email, .field-password {
+
+    .field-email,
+    .field-password {
         width: 100%;
         margin: 5px;
         position: relative;
     }
+
     .field-checkbox input {
         margin-right: 10px;
+
+    }
+
+    .field-checkbox {
+        flex-wrap: wrap;
     }
 }

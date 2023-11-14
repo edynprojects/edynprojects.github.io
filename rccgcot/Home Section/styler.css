@@ -474,10 +474,17 @@ button {
     justify-content: center;
     align-items: center;
 }
-
-.container-2 {
+.container-22 {
     display: block;
-    padding: 10px;
+}
+.container-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    /* background-color: red; */
+    /* padding: 10px; */
 }
 
 .title2 {
@@ -665,22 +672,24 @@ p {
     position: relative;
 }
 
-.row img {
-    width: 100%;
+/* .row img {
+    
     position: relative;
     border-radius: 5px;
     overflow: none;
     padding: 10px;
-}
+} */
 
 
 .img-con {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
+    width: 100%;
 }
 .img-con img {
     border-radius: 10px;
+    width: inherit;
 }
 
 .col {
@@ -1126,7 +1135,7 @@ p {
 
     .goal {
         height: 50vh;
-
+        width: 100%;
         font-size: 20px;
         font-family: 'Gabriela';
     }
@@ -1136,13 +1145,12 @@ p {
     }
 
     .col {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        margin: 0px;
+
         height: auto;
         width: 100%;
         flex: 0 0 100%;
+
     }
 
     .ts .container {
@@ -1367,6 +1375,10 @@ p {
         bottom:  15px;
 
     }
+
+    #nameDisplay {
+        margin-top: 20px;
+    }    
 
     .on-load-container img {
         width: 20%;

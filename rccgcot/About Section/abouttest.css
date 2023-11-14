@@ -20,6 +20,22 @@ html {
     --text-color-white-700: #f2f2f2e1;
     --text-color-black-700: #232425;
 }
+::-webkit-scrollbar {
+    width: 5px;
+
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(90, 90, 94);
+    border-radius: 10px;
+}
+
+ ::-webkit-scrollbar-track {
+    transition: 0.7s;
+}
+::-webkit-scrollbar-track:hover {
+    border-radius: 10px;
+    background-color: #cacaca;
+}
 ul {
     padding-left: 10px;
 }
@@ -102,11 +118,55 @@ button {
     left: -3px;
 }
 
+
+/* ABOUT SECTION HOME PAGE */
+
+.about-home {
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/img/jon-tyson--0o9dgxEu5Q-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 30px;
+}
+
+.about-cta h1 {
+    font-size: 30px;
+    text-shadow: 2px 2px #888;
+    color: var(--text-color-white-700);    
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* END OF ABOUT SECTION HOME PAGE */
+
  /* BELIEF SECTION */
 
  .belief{    
-    height: auto;
+    height: 100vh;
     background-color: #232425;
+    overflow-y: auto;
+    padding: 25px 0;
+}
+::-webkit-scrollbar {
+    width: 5px;
+
+}
+
+.belief::-webkit-scrollbar-thumb {
+    background: rgb(90, 90, 94);
+    border-radius: 10px;
+}
+
+ ::-webkit-scrollbar-track {
+    transition: 0.7s;
+}
+::-webkit-scrollbar-track:hover {
+    border-radius: 10px;
+    background-color: #cacaca;
 }
 .belief .title h3 , .belief .title h1{
     color: var(--text-color-white-700);    
@@ -326,8 +386,7 @@ width: 300px;
     /* background: rgba(0, 0, 0, 0.1);     */
     border-radius: 3px;
 }
-.executive-col-img {
-    
+.executive-col-img {    
     height: 230px;
     width: inherit;
     border-radius: 3px;
@@ -350,7 +409,7 @@ width: 300px;
 }
 .executive-title h4{
     font-size: 17px;
-    font-family: 'Gabriela', sans-serif;
+    font-family: 'poppins', sans-serif;
     color: var(--skin-color);
     font-weight: 500;
 }
@@ -370,6 +429,18 @@ width: 300px;
     color: #6b6e6b;
     font-size: 14.5px;
 }
+@media screen and (max-width: 425px)  {
+    .executive .executive-row .executive-col {
+            width: 100%;
+            height: 360px;  
+        }
+        .executive-col-img {    
+            height: 260px;
+            width: inherit;
+            
+        } 
+}
+
 /* MARQUEE */
 .sermon {
     height: auto;
@@ -507,5 +578,21 @@ width: 300px;
     border: 2px solid #fff;
     margin:  5px 0px 20px 0;
     border-radius: 20px;
+}
+
+@media screen and (max-width: 425px)  {
+    .faq-dropdown {
+        width: 100%;
+    
+    }
+
+    .faq-header {
+        height: 50px;
+        display: flex;    
+        text-align: left;
+        align-items: center;
+        gap: 5px;
+        transition: 1s;
+    }
 }
 /* END OF  FAQ*/

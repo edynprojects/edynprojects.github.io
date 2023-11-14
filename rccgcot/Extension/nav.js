@@ -15,7 +15,6 @@ const accountLogIn = document.querySelector(".accountLogIn");
 const hrefSignUp = document.querySelector(".hrefSignUp");
 const hrefLogin = document.querySelector(".hrefLogin");
 
-
 // Function to toggle the navigation menu and filter sections
 function closeMobileNavigation() {
   navMenu.classList.remove("nav-is-active");
@@ -23,6 +22,13 @@ function closeMobileNavigation() {
   mobileNav.classList.remove("header-active");
   hr.classList.add("hr-hidden");
   headerBehaviour();
+}
+
+function disableScrolling() {
+  document.body.classList.add("disable-scrolling");
+}
+function enableScrolling() {
+  document.body.classList.remove("disable-scrolling");
 }
 
 function headerBehaviour() {
@@ -44,45 +50,85 @@ function toggleNavigation() {
     mobileNav.classList.toggle("header-active");
     hr.classList.toggle("hr-hidden");
     headerBehaviour();
+
+    if (mobileNav.classList.contains("header-active")) {
+      disableScrolling();
+    } else {
+      enableScrolling();
+    }
   });
 
   // Account toggle
 
-function accountToggleSignUp() {
-  forms.classList.toggle("form-inactive")
-  if (signUpForm.classList.contains("showform")) {
-    signUpForm.classList.replace("showform", "hideform");
-  } else {
-    signUpForm.classList.replace("hideform", "showform");
-    accountOption.classList.remove("account-option-show")
+  // DOCUMENT CLOSE FORM
+
+  function closeform() {
+    document.addEventListener("click", (event) => {
+      const target = event.target;
+      if (
+        !forms.classList.contains("form-inactive") &&
+        !forms.contains(target) &&
+        !accountBtn.contains(target) &&
+        !accountOption.contains(target)
+      ) {
+        console.log("tapped outside the form");
+        forms.classList.add("form-inactive");
+        enableScrolling();
+        if (
+          signUpForm.classList.contains("showform") ||
+          loginForm.classList.contains("showform")
+        ) {
+          signUpForm.classList.replace("showform", "hideform");
+          loginForm.classList.replace("showform", "hideform");
+        } else {
+          signUpForm.classList.replace("hideform", "showform");
+          loginForm.classList.replace("hideform", "showform");
+        }
+      }
+    });
   }
-}
 
-function accountToggleLogIn() {
-  forms.classList.remove("form-inactive")
-  if (loginForm.classList.contains("showform")) {
-    loginForm.classList.replace("showform", "hideform");
-  } 
-
-  else {
-    loginForm.classList.replace("hideform", "showform");
-    accountOption.classList.remove("account-option-show")
+  function accountToggleSignUp() {
+    closeform();
+    forms.classList.toggle("form-inactive");
+    if (signUpForm.classList.contains("showform")) {
+      signUpForm.classList.replace("showform", "hideform");
+    } else {
+      signUpForm.classList.replace("hideform", "showform");
+      accountOption.classList.remove("account-option-show");
+    }
   }
-}
 
+  function accountToggleLogIn() {
+    closeform();
+    forms.classList.remove("form-inactive");
 
-accountBtn.addEventListener("click", () => {
-    
-    if (signUpForm.classList.contains("showform") || loginForm.classList.contains("showform") && !forms.classList.contains("form-inactive")) {
+    if (loginForm.classList.contains("showform")) {
+      loginForm.classList.replace("showform", "hideform");
+    } else {
+      loginForm.classList.replace("hideform", "showform");
+      accountOption.classList.remove("account-option-show");
+    }
+  }
+
+  accountBtn.addEventListener("click", () => {
+    if (
+      signUpForm.classList.contains("showform") ||
+      (loginForm.classList.contains("showform") &&
+        !forms.classList.contains("form-inactive"))
+    ) {
       signUpForm.classList.replace("showform", "hideform");
       loginForm.classList.replace("showform", "hideform");
-      forms.classList.add("form-inactive")
-      console.log("omo e no easy")
-    }       
-    else if(signUpForm.classList.contains("hideform") || loginForm.classList.contains("hideform") && forms.classList.contains("form-inactive")) {
-      accountOption.classList.toggle("account-option-show")
-    }
-    else{
+      enableScrolling();
+      forms.classList.add("form-inactive");
+      console.log("omo e no easy");
+    } else if (
+      signUpForm.classList.contains("hideform") ||
+      (loginForm.classList.contains("hideform") &&
+        forms.classList.contains("form-inactive"))
+    ) {
+      accountOption.classList.toggle("account-option-show");
+    } else {
       const LinkDropdown = document.querySelectorAll(".link-dropdown");
       LinkDropdown.forEach((otherlink) => {
         const otherDropdown = otherlink.querySelector(".dropdown");
@@ -91,17 +137,17 @@ accountBtn.addEventListener("click", () => {
         }
       });
     }
-    })
+  });
 
-  
+  accountSignUp.addEventListener("click", () => {
+    accountToggleSignUp();
+    disableScrolling();
+  });
 
-      accountSignUp.addEventListener("click", ()=> {
-        accountToggleSignUp()
-      })
-
-      accountLogIn.addEventListener("click", ()=> {
-        accountToggleLogIn()
-      })
+  accountLogIn.addEventListener("click", () => {
+    accountToggleLogIn();
+    disableScrolling();
+  });
 
   // Close navLinks when clicking outside the navigation area
   document.addEventListener("click", (event) => {
@@ -114,44 +160,23 @@ accountBtn.addEventListener("click", () => {
       !mobileNav.contains(target)
     ) {
       closeMobileNavigation();
+    } else if (
+      accountOption.classList.contains("account-option-show") &&
+      !accountBtn.contains(target)
+    ) {
+      accountOption.classList.remove("account-option-show");
     }
-
-    else if(accountOption.classList.contains("account-option-show")&&
-    !accountBtn.contains(target)
-    ){
-      accountOption.classList.remove("account-option-show")
-    }
-
-    else if(!forms.classList.contains("form-inactive") &&
-    
-    !forms.contains(target) &&    
-    !accountBtn.contains(target)&&
-    !accountOption.contains(target))  {
-      forms.classList.add("form-inactive")
-      if (signUpForm.classList.contains("showform") || loginForm.classList.contains("showform")) {
-        signUpForm.classList.replace("showform", "hideform");
-        loginForm.classList.replace("showform", "hideform");
-      }       
-      else {
-        signUpForm.classList.replace("hideform", "showform");
-        loginForm.classList.replace("hideform", "showform");
-      }
-    }
-
-
-
-    
   });
 
-  hrefLogin.addEventListener("click", ()=> {
+  hrefLogin.addEventListener("click", () => {
     signUpForm.classList.replace("showform", "hideform");
     loginForm.classList.replace("hideform", "showform");
-  })
+  });
 
-  hrefSignUp.addEventListener("click", ()=> {
+  hrefSignUp.addEventListener("click", () => {
     signUpForm.classList.replace("hideform", "showform");
-      loginForm.classList.replace("showform", "hideform");
-  })
+    loginForm.classList.replace("showform", "hideform");
+  });
 
   // let prevScrollPos = window.scrollY;
   let isScrolling = false;
@@ -166,13 +191,6 @@ accountBtn.addEventListener("click", () => {
       isScrolling = false;
       console.log("not scrollling");
     }
-    // prevScrollPos = currentScroll;
-    console.log("scrolling");
-    // if (isScrollingUp && currentScroll > 0) {
-    //   header.classList.add('header-active-static');
-    // } else {
-    //   header.classList.remove('header-active-static');
-    // }
   }
   mobileNav.addEventListener("scroll", scrollNav);
 }
@@ -194,7 +212,12 @@ function setupNavigation() {
     }
     prevScrollPos = currentScroll;
 
-    if (isScrollingUp && currentScroll > header.clientHeight) {
+    if (
+      !mobileNav.classList.contains("header-active") &&
+      forms.classList.contains("form-inactive") &&
+      isScrollingUp &&
+      currentScroll > header.clientHeight
+    ) {
       header.classList.add("nav-hidden");
     } else {
       header.classList.remove("nav-hidden");

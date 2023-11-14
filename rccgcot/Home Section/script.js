@@ -89,12 +89,7 @@ for(let i = 0; i< service.length; i++) {
     currentIndex = (currentIndex +1) % service.length
     displayServiceDetails()
  }, 4000);
-const preloader= document.querySelector(".preloader")
-document.body.classList.add("disable-scrolling")
-window.addEventListener("load", function() {
-    preloader.classList.add("on-load-none")
-    document.body.classList.remove("disable-scrolling")
-})
+
 
 
 // GETNAME VARIABLE FROM LOCALSTORAGE.
