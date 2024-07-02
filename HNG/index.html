@@ -8,22 +8,9 @@
   </head>
   <body>
     <section class="home">
-      <!-- <header>
-         <nav>
-            <div class="logo">Codewithedyn</div>
-            <div class="nav-links">
-               <ul>
-                  <li>Home</li>
-                  <li><a href="">HNG Tech Learn</a></li>
-                  <li><a href="">Keyword Dog</a></li>
-                  <li><a href="">Scrape any word</a></li>
-               </ul>
-            </div>
-         </nav>
-      </header> -->
       <div class="container">
         <div class="row">
-          <div class="col img-container">
+          <div class="col img-container">            
             <img
               src="./images/slackProfilePicture.jpg"
               alt="Slack Profile Image"
@@ -31,16 +18,19 @@
               width="500"
               height="500"
             />
+            <div class="img-overlay"></div>
           </div>
-          <div class="col profile">
+          <div class="col">
+           <div class="profile">
             <h3>Slack Name</h3>
             <h1 data-testid="slackDisplayName">Codewithedyn</h1>
 
             <h3>Slack Email</h3>
             <h2>onasanyaemmanuel088@gmail.com</h2>
 
-            <!-- <p data-testid="currentTimeUTC" class="currentTimeUTC"></p>
-            <p data-testid="currentDay" class="currentDay"></p> -->
+            <p data-testid="currentDay" class="currentDay"></p>
+            <p data-testid="currentTimeUTC" class="currentTimeUTC"></p>
+           </div>
           </div>
         </div>
       </div>
@@ -103,9 +93,25 @@
       </div>
     </section>
 <footer>
-   <div class="container">
-      <div class="row">
-         <div class="col"></div>
+   <div class="footer-container">
+      <div class="footer-row">
+         <div class="col-title">
+          <div class="title">
+            <h1>Codewithedyn</h1>            
+          </div>
+          <div class="col-links">
+            <h3>USEFUL LINKS</h3>
+            <div class="links">
+              <li><a href="#">Home</a></li>
+              <li><a href="https://hng.tech/learn" data-testid="hngLink">HNG Tech Learn</a></li>
+                <li><a href="https://keyword.dog" data-testid="keywordLink">Keyword Dog</a></li>
+                <li><a href="https://scrapeanyweb.site" data-testid="scrapeanywebLink">Scrape Any Web</a></li>
+            </div>
+          </div>
+         </div>
+      </div>
+      <div class="base-message">
+        <p>Designed and Developed by Codewithedyn. </p>
       </div>
    </div>
 </footer>
