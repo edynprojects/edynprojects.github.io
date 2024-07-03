@@ -28,6 +28,7 @@ body {
 html {
    scroll-behavior: smooth;
 }
+
 a {
    color: var(--white-color);
    text-decoration: none;
@@ -87,7 +88,8 @@ section {
 
 }
 
-.col h3, .col-title h3 {
+.col h3,
+.col-title h3 {
    font-size: 1.5rem;
    color: var(--grey-color);
    text-align: center;
@@ -162,16 +164,18 @@ li {
    color: transparent;
 }
 
-.footer-row{
+.footer-row {
    width: 100%;
 }
+
 .col-title {
-   display:flex;
+   display: flex;
    justify-content: space-around;
    align-items: center;
    padding: 20px;
    width: 100%;
 }
+
 .footer-title {
    font-size: 2rem;
    background-image: var(--linearGradient-skin-color);
@@ -180,10 +184,11 @@ li {
    color: transparent;
    text-align: center;
 }
+
 .links li a {
    transition: 0.8s;
-  font-size: 1.2rem;
-  color: var(--skin-color);
+   font-size: 1.2rem;
+   color: var(--skin-color);
 }
 
 .links li a:hover {
@@ -210,15 +215,16 @@ li {
    ul {
       width: 100%;
    }
+
    .col-title {
-      display:flex;
+      display: flex;
       justify-content: center;
       flex-direction: column;
       align-items: flex-start;
       padding: 20px;
       width: 100%;
    }
-   
+
 }
 
 @media screen and (max-width: 600px) {
@@ -233,6 +239,10 @@ li {
 
    .col h1 {
       font-size: 3rem;
+   }
+
+   .col h2 {
+      font-size: 0.9rem;
    }
 
    .footer-title {
@@ -262,9 +272,11 @@ li {
    .col h1 {
       font-size: 2.5rem;
    }
+
    .footer-title {
       font-size: 1.2rem;
    }
+
    .title h1 {
 
       font-size: 2.5rem;
@@ -272,8 +284,7 @@ li {
    }
 
    .col h2 {
-      font-weight: 400;
-      font-size: 1rem;
+      font-size: 0.8rem;
    }
 
    .heading {
@@ -281,18 +292,20 @@ li {
    }
 }
 
-@media screen and (max-width: 330px) {
+@media screen and (max-width: 340px) {
    .img-container {
       width: 350px;
       height: 400px;
    }
 
    .col h1 {
-      font-size: 2.5rem;
+      font-size: 2.2rem;
    }
+
    .footer-title {
       font-size: 1rem;
    }
+
    .title h1 {
 
       font-size: 2.5rem;
@@ -301,10 +314,16 @@ li {
 
    .col h2 {
       font-weight: 400;
-      font-size: 1rem;
+      font-size: 0.7rem;
    }
 
    .heading {
       font-size: 1.5rem;
+   }
+}
+
+@media screen and (max-width: 310px) {
+   .col h1 {
+      font-size: 1.9rem;
    }
 }
