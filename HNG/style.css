@@ -172,7 +172,14 @@ li {
    padding: 20px;
    width: 100%;
 }
-
+.footer-title {
+   font-size: 2rem;
+   background-image: var(--linearGradient-skin-color);
+   -webkit-background-clip: text;
+   -moz-background-clip: text;
+   color: transparent;
+   text-align: center;
+}
 .links li a {
    transition: 0.8s;
   font-size: 1.2rem;
@@ -228,6 +235,10 @@ li {
       font-size: 3rem;
    }
 
+   .footer-title {
+      font-size: 1.6rem;
+   }
+
    .col {
       padding: 0;
    }
@@ -251,7 +262,37 @@ li {
    .col h1 {
       font-size: 2.5rem;
    }
+   .footer-title {
+      font-size: 1.2rem;
+   }
+   .title h1 {
 
+      font-size: 2.5rem;
+      line-height: 2.7rem;
+   }
+
+   .col h2 {
+      font-weight: 400;
+      font-size: 1rem;
+   }
+
+   .heading {
+      font-size: 1.5rem;
+   }
+}
+
+@media screen and (max-width: 330px) {
+   .img-container {
+      width: 350px;
+      height: 400px;
+   }
+
+   .col h1 {
+      font-size: 2.5rem;
+   }
+   .footer-title {
+      font-size: 1rem;
+   }
    .title h1 {
 
       font-size: 2.5rem;
