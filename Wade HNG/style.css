@@ -1,0 +1,148 @@
+:root {
+   --skin-color: #1ec1d0a7;
+   --white-color: #fff;
+   --skin-color-2: #262625;
+   --skin-color-3: #232422;
+   --grey-color: #999;
+   --linearGradient-skin-color: linear-gradient(460deg, var(--skin-color) 28%, var(--grey-color) 40%, rgba(169, 176, 175, 0.654) 100%);
+}
+
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+body {
+   background: linear-gradient(-180deg, var(--skin-color-2), var(--skin-color-3));
+   color: var(--white-color);
+   font-size: 16px;
+   font-family: "Poppins", sans-serif;
+   color: var(--white-color);
+
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+a {
+   color: var(--skin-color);
+   text-decoration: none;
+}
+li {
+   list-style: none;
+}
+section {
+   height: 20vh;
+   margin-bottom: 20px;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 30px;
+}
+
+main {
+   height: 150vh !important;
+   /* background-color: red; */
+   margin-bottom: 20px;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 30px;
+}
+
+header {
+   background-color: #343232;
+   /* backdrop-filter: blur(20px); */
+   height: 8vh;
+   border-radius: 20px;
+   display: flex;
+   align-items: center;
+   width: 95%;
+   position: fixed;
+   top: 20px;
+   left: 50%;   
+   transform: translateX(-50%);
+   z-index: 1;
+}
+nav {
+   padding-inline: 20px;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.logo {
+   font-size: 1.5rem;
+   background-image: var(--linearGradient-skin-color);
+   -moz-background-clip: text;
+   -webkit-background-clip: text;
+   color: transparent;
+
+}
+.nav-links {
+   display: flex;
+   gap: 20px;
+}
+.cta {
+   display: flex;
+   align-items: center;
+   justify-content: center;  
+   flex-direction: column;
+}
+.cta-title {
+   text-align: center;
+   width: 80%;
+}
+
+.cta-title h3 {
+   color: grey;
+   letter-spacing: 1px;
+   font-style: italic;
+}
+.cta-title h1 {
+   font-family: 'Times New Roman', Times, serif;
+   font-size: 4rem;
+}
+
+.colored {
+   color: var(--skin-color);
+}
+
+.colored-2 {
+   background-image: var(--linearGradient-skin-color);
+   -moz-background-clip: text;
+   -webkit-background-clip: text;
+   text-align: center;
+   color: transparent;
+}
+
+.cta-image {
+   margin-top: 30px;
+      position: relative;
+      width: 500px;
+      height: 500px;
+      position: relative;
+      /* background-color: red; */
+   }
+   .cta-image::before {
+      content: '';
+      background-color: rgb(86, 83, 83);
+      top: -20px;
+      left: -20px;
+      height: 100%;
+      width: 100%;
+      border-radius: 20px;
+      position: absolute;
+      z-index: -1;
+
+   }
+   .cta-image img {
+      max-width: 100%;
+      
+      border-radius: 40px;
+      z-index: 1;
+   }
