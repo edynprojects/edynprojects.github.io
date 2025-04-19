@@ -1,0 +1,56 @@
+body {
+   padding: 30px;
+   background: #068539;
+}
+
+body,
+input[type="file"],
+th,
+td {
+   font-family: Poppins;
+}
+
+input[type="file"] {
+   margin-bottom: 20px;
+   padding: 10px;
+}
+
+table {
+   border-collapse: collapse;
+   width: 100%;
+   background: white;
+}
+
+th,
+td {
+   border: 1px solid #ccc;
+   padding: 10px;
+   text-align: center;
+}
+
+th {
+   background: #4CAF50;
+   color: white;
+}
+
+.container {
+   max-width: 900px;
+   margin: auto;
+   background: #fff;
+   padding: 20px;
+   border-radius: 8px;
+   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+   color: #333;
+   font-size: 30px;
+}
+
+.red {
+   color: red;
+}
+
+#result {
+   overflow-x: auto;
+}
